@@ -16,10 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Youth+ Africa",
-  description: "Empowering Africa’s youth to build, create, and lead.",
-  icons: {
-    icon: "../public/images/youth-plus-logo.png"
-  }
+  description: "Empowering Africa’s youth to build, create, and lead."
 };
 
 export default function RootLayout({

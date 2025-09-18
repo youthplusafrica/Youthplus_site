@@ -12,6 +12,20 @@ html, body {
 }
 
 a {
-  text-decoration-color: var(--yplus-primary);
+  text-decoration-color: var(--yplus-black);
   text-underline-offset: 2px;
 }
+
+.yplus-menu .ant-menu-overflow { justify-content: flex-end; }
+
+.yplus-menu .ant-menu-title-content > a,
+.yplus-menu .ant-menu-submenu-title > a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.yplus-menu { padding-inline: 0 !important; }     
+.yplus-menu .ant-menu-overflow { justify-content: flex-end; } 
+
+.yplus-menu .ant-menu-item,
+.yplus-menu .ant-menu-submenu { margin-inline: 0; }

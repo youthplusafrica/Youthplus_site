@@ -1,8 +1,8 @@
 // components/AntdProvider.tsx
-'use client';
+"use client";
 
-import { ConfigProvider, theme } from 'antd';
-import type { ReactNode } from 'react';
+import { ConfigProvider, theme } from "antd";
+import type { ReactNode } from "react";
 
 export default function AntdProvider({ children }: { children: ReactNode }) {
   return (
@@ -10,24 +10,24 @@ export default function AntdProvider({ children }: { children: ReactNode }) {
       theme={{
         algorithm: theme.defaultAlgorithm,
         token: {
-          // Brand tokens
-          colorPrimary: '#ead61f',
-          colorTextBase: '#000',
-          colorBgBase: '#fff',
-          colorLink: '#ead61f',
-          // Nice rounded corners across components
-          borderRadius: 12
+          colorPrimary: "#ead61f",
+          colorTextBase: "#000",
+          colorBgBase: "#fff",
+          colorLink: "#ead61f",
+          borderRadius: 12,
         },
-        // Optional per-component tweaks (adjust anytime)
         components: {
           Button: {
-            controlHeight: 40 // slightly taller default buttons
+            controlHeight: 40,
           },
           Menu: {
-            itemSelectedColor: '#000',
-            itemSelectedBg: 'rgba(234,214,31,0.25)'
-          }
-        }
+            itemColor: "#000",
+            itemHoverColor: "#000",
+            itemSelectedColor: "#000",
+            itemSelectedBg: "transparent",
+            fontSize: 16,
+          },
+        },
       }}
     >
       {children}
