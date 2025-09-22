@@ -9,6 +9,7 @@ import {
   MailOutlined,
   EnvironmentOutlined,
 	XOutlined,
+  TikTokOutlined,
 } from "@ant-design/icons";
 
 const NAV = [
@@ -29,16 +30,21 @@ const SOCIAL = [
     href: "https://twitter.com/YouthPlusAfrica",
     icon: <XOutlined />,
   },
-  // {
-  //   label: "YouTube",
-  //   href: "https://youtube.com/@your-handle",
-  //   icon: <YoutubeFilled />,
-  // },
+  {
+    label: "YouTube",
+    href: "https://youtube.com/@youthplusafrica",
+    icon: <YoutubeFilled />,
+  },
   {
     label: "LinkedIn",
     href: "https://linkedin.com/company/youthplusafrica",
     icon: <LinkedinFilled />,
   },
+  {
+    label: "TikTok",
+    href: "https://tiktok.com/@youthplusafrica",
+    icon: <TikTokOutlined />,
+  }
 ];
 
 export default function FooterMain() {
