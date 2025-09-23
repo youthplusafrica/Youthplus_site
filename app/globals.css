@@ -29,3 +29,10 @@ a {
 
 .yplus-menu .ant-menu-item,
 .yplus-menu .ant-menu-submenu { margin-inline: 0; }
+
+.clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

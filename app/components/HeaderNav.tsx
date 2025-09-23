@@ -7,11 +7,14 @@ import { Menu, Drawer, Button } from "antd";
 import type { MenuProps } from "antd";
 import { MenuOutlined, CloseOutlined } from "@ant-design/icons";
 import { useMemo, useState } from "react";
+import { VENTURES } from "../content/ventures";
 
 const NAV = {
   HOME: "/home",
   EVENTS: "/events",
+  VENTURES: "/ventures",
   ABOUT: "/about",
+  PARTNERWITHUS: "/partner-with-us",
   CONTACT: "/contact",
 } as const;
 
@@ -24,12 +27,22 @@ export default function HeaderNav() {
     if (pathname.startsWith(NAV.EVENTS)) return NAV.EVENTS;
     if (pathname.startsWith(NAV.ABOUT)) return NAV.ABOUT;
     if (pathname.startsWith(NAV.CONTACT)) return NAV.CONTACT;
+    if (pathname.startsWith(NAV.PARTNERWITHUS)) return NAV.PARTNERWITHUS;
+    if (pathname.startsWith(NAV.VENTURES)) return NAV.VENTURES;
     return "";
   }, [pathname]);
 
   const desktopItems: MenuProps["items"] = [
     { key: NAV.HOME, label: <Link href={NAV.HOME}>Home</Link> },
     { key: NAV.EVENTS, label: <Link href={NAV.EVENTS}>Events</Link> },
+    {
+      key: NAV.VENTURES,
+      label: <Link href={NAV.VENTURES}>Ventures</Link>,
+      children: VENTURES.map((v) => ({
+        key: `${NAV.VENTURES}#${v.id}`,
+        label: <Link href={`/ventures#${v.id}`}>{v.name}</Link>,
+      })),
+    },
     {
       key: NAV.ABOUT,
       label: <Link href={NAV.ABOUT}>About Us</Link>,
@@ -44,6 +57,10 @@ export default function HeaderNav() {
         },
       ],
     },
+    {
+      key: NAV.PARTNERWITHUS,
+      label: <Link href={NAV.PARTNERWITHUS}>Partner with us</Link>,
+    },
     { key: NAV.CONTACT, label: <Link href={NAV.CONTACT}>Contact</Link> },
   ];
 
@@ -51,7 +68,7 @@ export default function HeaderNav() {
     <nav className="px-4 py-3">
       <ul className="flex flex-col text-lg">
         <li className="py-2">
-          <Link href={NAV.HOME} onClick={() => setOpen(false)} >
+          <Link href={NAV.HOME} onClick={() => setOpen(false)}>
             Home
           </Link>
         </li>
@@ -59,6 +76,20 @@ export default function HeaderNav() {
           <Link href={NAV.EVENTS} onClick={() => setOpen(false)}>
             Events
           </Link>
+        </li>
+        <li className="py-2">
+          <Link href={NAV.VENTURES} onClick={() => setOpen(false)}>
+            Ventures
+          </Link>
+          <ul className="mt-1 ml-3 text-base">
+            {VENTURES.map((v) => (
+              <li className="py-1" key={v.id}>
+                <Link href={`/ventures#${v.id}`} onClick={() => setOpen(false)}>
+                  {v.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </li>
         <li className="py-2">
           <Link href={NAV.ABOUT} onClick={() => setOpen(false)}>
@@ -76,6 +107,11 @@ export default function HeaderNav() {
               </Link>
             </li>
           </ul>
+        </li>
+        <li>
+          <Link href={NAV.PARTNERWITHUS} onClick={() => setOpen(false)}>
+            Partner with us
+          </Link>
         </li>
         <li className="py-2">
           <Link href={NAV.CONTACT} onClick={() => setOpen(false)}>
@@ -106,14 +142,15 @@ export default function HeaderNav() {
           </Link>
 
           {/* Desktop menu */}
-          <div className="hidden md:flex flex-1 justify-end">
+          <div className="hidden md:flex flex-1 min-w-0 justify-end">
             <Menu
               mode="horizontal"
               selectedKeys={[selectedKey]}
               items={desktopItems}
               className="border-0"
-							style={{justifyContent: 'flex-end'}}
-							rootClassName="yplus-menu"
+              style={{ justifyContent: "flex-end" }}
+              rootClassName="yplus-menu"
+              disabledOverflow
             />
           </div>
 
@@ -147,8 +184,8 @@ export default function HeaderNav() {
         open={open}
         styles={{
           body: { padding: 0 },
-          header: { borderBottom: "1px solid rgba(0,0,0,.06)" }, 
-          footer: { borderTop: "1px solid rgba(0,0,0,.06)" }, 
+          header: { borderBottom: "1px solid rgba(0,0,0,.06)" },
+          footer: { borderTop: "1px solid rgba(0,0,0,.06)" },
         }}
       >
         {mobileMenu}

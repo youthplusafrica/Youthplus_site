@@ -10,6 +10,7 @@ export default function AntdProvider({ children }: { children: ReactNode }) {
       theme={{
         algorithm: theme.defaultAlgorithm,
         token: {
+          fontFamily: "var(--font-montserrat), system-ui, sans-serif",
           colorPrimary: "#ead61f",
           colorTextBase: "#000",
           colorBgBase: "#fff",
