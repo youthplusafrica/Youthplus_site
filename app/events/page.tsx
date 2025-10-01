@@ -1,20 +1,28 @@
 "use client";
 
 import EventCard from "../components/EventCard";
+import FooterMain from "../components/FooterMain";
 import HeaderNav from "../components/HeaderNav";
+import SectionWithBg from "../components/SectionWithBg";
 import { PAST_EVENTS, UPCOMING_EVENTS } from "../content/events";
 
 export default function EventsPage() {
   return (
     <>
       <HeaderNav />
-      <div className="mx-auto max-w-6xl px-6 py-12 md:py-16">
+      {/* <div className="mx-auto max-w-6xl px-6 py-12 md:py-16"> */}
+      <SectionWithBg
+        src="/images/events-bg.jpg"   
+        alt="Youth+ events background"
+        overlay={60}                            
+        className="py-12 md:py-16"
+      >
         {/* Upcoming */}
         {UPCOMING_EVENTS.length > 0 && (
           <>
             <div>
-              <h1 className="text-3xl font-bold">Upcoming events</h1>
-              <p className="text-black/70 mt-1">
+              <h1 className="text-3xl font-bold text-white">Upcoming events</h1>
+              <p className="text-white/80 mt-1">
                 Discover what’s coming up across Youth+ Africa.
               </p>
             </div>
@@ -31,8 +39,8 @@ export default function EventsPage() {
         {PAST_EVENTS.length > 0 && (
           <>
             <div className="mt-14">
-              <h2 className="text-2xl font-semibold">Past events</h2>
-              <p className="text-black/70 mt-1">
+              <h2 className="text-2xl font-semibold text-white">Past events</h2>
+              <p className="text-white/80 mt-1">
                 Highlights from recent activities.
               </p>
             </div>
@@ -49,7 +57,10 @@ export default function EventsPage() {
         {UPCOMING_EVENTS.length === 0 && PAST_EVENTS.length === 0 && (
           <p className="text-black/60">No events to show right now.</p>
         )}
-      </div>
+      {/* </div> */}
+      </SectionWithBg>
+
+      <FooterMain />
     </>
   );
 }

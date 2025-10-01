@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 import AntdProvider from "./components/AntdProvider";
+import AntdReact19Patch from "./components/AntdReact19Patch";
 
 
 const montserrat = Montserrat({
@@ -28,6 +29,7 @@ export default function RootLayout({
       <body
         className={`${montserrat.className} ${montserrat.variable} antialiased`}
       >
+        <AntdReact19Patch />
         <AntdRegistry>
           <AntdProvider>
             {children}

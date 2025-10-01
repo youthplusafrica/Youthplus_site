@@ -16,6 +16,7 @@ const NAV = {
   ABOUT: "/about",
   PARTNERWITHUS: "/partner-with-us",
   CONTACT: "/contact",
+  SHOP: "/shop",
 } as const;
 
 export default function HeaderNav() {
@@ -29,6 +30,7 @@ export default function HeaderNav() {
     if (pathname.startsWith(NAV.CONTACT)) return NAV.CONTACT;
     if (pathname.startsWith(NAV.PARTNERWITHUS)) return NAV.PARTNERWITHUS;
     if (pathname.startsWith(NAV.VENTURES)) return NAV.VENTURES;
+    if (pathname.startsWith(NAV.SHOP)) return NAV.SHOP;
     return "";
   }, [pathname]);
 
@@ -62,6 +64,7 @@ export default function HeaderNav() {
       label: <Link href={NAV.PARTNERWITHUS}>Partner with us</Link>,
     },
     { key: NAV.CONTACT, label: <Link href={NAV.CONTACT}>Contact</Link> },
+    { key: NAV.SHOP, label: <Link href={NAV.SHOP}>Shop</Link> },
   ];
 
   const mobileMenu = (
@@ -116,6 +119,11 @@ export default function HeaderNav() {
         <li className="py-2">
           <Link href={NAV.CONTACT} onClick={() => setOpen(false)}>
             Contact
+          </Link>
+        </li>
+        <li className="py-2">
+          <Link href={NAV.SHOP} onClick={() => setOpen(false)}>
+            Shop
           </Link>
         </li>
       </ul>

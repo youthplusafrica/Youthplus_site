@@ -26,6 +26,7 @@ export default function EventDetailsModal({
 
   const poster = event.imageSrc; // ← reuse the card image
   const posterAlt = `${event.title} poster`; // simple alt fallback
+  const link = event.link;
 
   return (
     <Modal
@@ -94,9 +95,9 @@ export default function EventDetailsModal({
           </div>
           {event.hasFutureEvents && <div className="mt-2 flex items-center justify-between text-sm">
             <a
-              href={poster}
+              href={link}
               download
-              className="inline-flex items-center gap-1 text-[var(--yplus-primary,#ead61f)] hover:opacity-80"
+              className="inline-flex items-center gap-1 text-[var(--yplus-primary,#ead61f)] border border-[var(--yplus-primary,#ead61f)] rounded-full px-3 py-1 cursor-pointer"
             >
               <ScheduleOutlined /> Book a slot
             </a>

@@ -2,46 +2,36 @@ import { EventItem } from "../components/EventCard";
 
 export const UPCOMING_EVENTS: EventItem[] = [
   {
-    title: "Youth+ Festival 2025",
-    date: "2025-11-12",
-    location: "Nairobi",
-    imageSrc: "/images/youth+fest.jpg",
+    title: "Connect: Charting the Capital of You.",
+    date: "Friday 26, Sep 2025, 2PM - 6PM",
+    location: "LaunchPad Coworking, Westlands Avenue",
+    imageSrc: "/images/connect-fxpesa.jpeg",
     description:
       "Flagship youth culture & policy forum bringing creators, leaders, and partners together.",
-    link: "#",
+    link: "https://forms.gle/An82V5NKZqu76Dwz6",
     details:
-      "A day-long gathering featuring keynotes, showcases, and workshops on creativity, entrepreneurship, and youth leadership.",
-    // galleryUrl: "https://photos.app.goo.gl/your-album",  
-    // youtubeUrl: "https://www.youtube.com/watch?v=yourvideo"
+      "Do you know how investing, trading and forex actually work? Or how financial markets move money? This month we've got you covered! Connect by Youth+ Africa in Partnership with FXPesa will break it down for you. What's in it for you? You get to learn financial markets in a simple and practical way, place your first ever demo trade live and also stand a chance to win a $200 live trading account.",
+    hasFutureEvents: true,
   },
-  {
-    title: "Connect Workshop: Creative Careers",
-    date: "2025-10-03",
-    location: "Kigali",
-    imageSrc: "/images/connect+.jpg",
-    description:
-      "Hands-on training for emerging creatives—portfolio, pitching, and pathways.",
-    link: "#",
-    // galleryUrl: "https://drive.google.com/drive/folders/your-folder-id"
-  },
-  {
-    title: "Youth+ Radio Live",
-    date: "2024-12-14",
-    location: "Lagos",
-    imageSrc: "/images/radio.jpg",
-    description:
-      "A live taping with artists and founders on storytelling, music, and IP."
-  }
 ];
 
 export const PAST_EVENTS: EventItem[] = [
   {
-    title: "Youth+ Radio Live",
-    date: "2024-12-14",
-    location: "Lagos",
-    imageSrc: "/images/radio.jpg",
-    description: "A live taping with artists and founders on storytelling, music, and IP.",
-    // galleryUrl: "https://drive.google.com/drive/folders/your-folder-id"
+    title: "The Currency of Exchange",
+    date: "30th August 2025, 9AM - 3PM",
+    location: "Strathmore Business School",
+    imageSrc: "/images/currency-exchange.jpeg",
+    description: "Driving business evolution",
+    details: "A powerful day with speakers, entrepreneurs and thought leaders navigating the future of business growth, innovation and sustainable success.",
+    hasFutureEvents: false,
   },
-  // add more past items here…
+  {
+    title: "The Wealth BluePrint",
+    date: "16th and 23rd September 2025, 7-8PM",
+    location: "Online",
+    imageSrc: "/images/wealth-bp.jpeg",
+    description: "Behaviors, Planning and Investment Insights",
+    details: "Why do some people thrive financially while others struggle, even with the same income? The difference isn't luck, it's understanding your money behavior, having a clear financial plan and recognizing genuine investment opportunities. The wealth blueprint brings you exactly that. We partnered with ArvoCap Asset Managers to deliver institutional-grade financial wisdom in a language that actually makes sense.",
+    hasFutureEvents: false,
+  }
 ];

@@ -27,7 +27,7 @@ export default function TeamMemberCard({ m }: { m: TeamMember }) {
             alt={m.name}
             fill
             sizes="(max-width:768px) 100vw, 33vw"
-            className="object-cover object-center"
+            className="object-cover object-top"
           />
         )}
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-[var(--yplus-primary,#ead61f)]" />

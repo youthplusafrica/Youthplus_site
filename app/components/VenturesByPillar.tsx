@@ -37,7 +37,7 @@ const VENTURES: Venture[] = [
   {
     name: "Connect",
     pillar: "WE TRAIN",
-    coverImage: "/images/connect.jpg",
+    coverImage: "/images/connect-1.jpeg",
     logo: "/images/connect-logo.png",
     logoAlt: "Connect logo",
     overlayDescription:
@@ -200,7 +200,7 @@ const VENTURES: Venture[] = [
   {
     name: "Youth+ Festival",
     pillar: "WE LEAD",
-    coverImage: "/images/youth_fest.jpg",
+    coverImage: "/images/festival-1.jpg",
     logo: "/images/youthplus_festival.png",
     overlayDescription:
       "All Aggregated Xperiential Stores (All AXS) was envisioned as a gateway to open the doors of opportunity to Young Creators and Curators, Community Event Organizers and Digital/Virtual Event Planners, putting the control of the sale of tickets, merchandise and services into the hands of young creators. Our goals is to collaborate with communities, creatives and curators of immersive and inclusive events across live and virtual experiences, offering a uniquely accessible, user-friendly and enterprise first platform for our stakeholders to popularize and commercialize their event experiences.",

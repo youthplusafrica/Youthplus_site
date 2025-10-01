@@ -18,8 +18,10 @@ import {
   ReadOutlined,
   ScheduleOutlined,
   BankOutlined,
+  SolutionOutlined,
 } from "@ant-design/icons";
 import { useMemo, useState } from "react";
+import SponsorshipModal from "./SponsorshipModal";
 
 type BaseValues = {
   fullName: string;
@@ -41,11 +43,19 @@ type VolunteerValues = BaseValues & {
   availability?: string;
 };
 
+type MentorValues = BaseValues & {
+  mentorAreas: string[];
+  experience?: string; // e.g., "3–5 years"
+  availability?: string; // e.g., "Weekends"
+  portfolioUrl?: string; // LinkedIn/portfolio
+};
+
 const EMAIL = "partnerships@youthplusafrica.com"; // change if needed
 
 export default function PartnerWithUs() {
   const [loading, setLoading] = useState(false);
   const mailto = useMemo(() => EMAIL, []);
+  const [sponsorOpen, setSponsorOpen] = useState(false);
 
   const sendMail = (
     subject: string,
@@ -103,6 +113,26 @@ export default function PartnerWithUs() {
     }
   };
 
+  const onMentor = async (values: MentorValues) => {
+    if (values.website) return; // honeypot
+    setLoading(true);
+    try {
+      sendMail("Mentor partnership interest", {
+        "Full name": values.fullName,
+        Email: values.email,
+        Phone: values.phone,
+        "Mentor areas": values.mentorAreas,
+        Experience: values.experience,
+        Availability: values.availability,
+        "Portfolio/LinkedIn": values.portfolioUrl,
+        Message: values.message,
+      });
+      message.success("Opening your email app…");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <section id="partner" className="bg-white text-black">
       <div className="mx-auto max-w-6xl px-6 py-12 md:py-16">
@@ -113,7 +143,7 @@ export default function PartnerWithUs() {
             </h2>
             <p className="text-black/70 mt-1">
               Join Youth+ Africa as an individual{" "}
-              <strong>Facilitator/Trainer</strong> or as a{" "}
+              <strong>Facilitator/Trainer, Mentor</strong> or as a{" "}
               <strong>Volunteer</strong>. Help us grow programs, create
               opportunities, and reach more youth across the continent.
             </p>
@@ -255,6 +285,136 @@ export default function PartnerWithUs() {
                       </Form>
                     ),
                   },
+
+                  {
+                    key: "mentor",
+                    label: (
+                      <span className="flex items-center gap-2">
+                        <SolutionOutlined /> Mentor
+                      </span>
+                    ),
+                    children: (
+                      <Form layout="vertical" onFinish={onMentor}>
+                        <Alert
+                          type="info"
+                          showIcon
+                          className="mb-4"
+                          message={
+                            <span>
+                              Share time and guidance as a{" "}
+                              <strong>mentor</strong>—supporting learners,
+                              creators, and founders through check-ins, project
+                              feedback, and career advice.
+                            </span>
+                          }
+                        />
+
+                        <Form.Item
+                          name="fullName"
+                          label="Full name"
+                          rules={[
+                            {
+                              required: true,
+                              message: "Please enter your name",
+                            },
+                          ]}
+                        >
+                          <Input size="large" prefix={<ReadOutlined />} />
+                        </Form.Item>
+
+                        <Form.Item
+                          name="email"
+                          label="Email"
+                          rules={[
+                            {
+                              required: true,
+                              message: "Please enter your email",
+                            },
+                            { type: "email" },
+                          ]}
+                        >
+                          <Input size="large" prefix={<MailOutlined />} />
+                        </Form.Item>
+
+                        <Form.Item name="phone" label="Phone (optional)">
+                          <Input size="large" prefix={<PhoneOutlined />} />
+                        </Form.Item>
+
+                        <Form.Item
+                          name="mentorAreas"
+                          label="Mentor areas"
+                          rules={[
+                            {
+                              required: true,
+                              message: "Select at least one area",
+                            },
+                          ]}
+                        >
+                          <Select
+                            mode="multiple"
+                            size="large"
+                            placeholder="e.g., Fundraising, Product, Design, Media, Marketing…"
+                            options={[
+                              { value: "Entrepreneurship / Fundraising" },
+                              { value: "Business Strategy / Operations" },
+                              { value: "Product Management" },
+                              { value: "Design / UI-UX" },
+                              { value: "Engineering / No-Code" },
+                              { value: "Content / Media / Podcasting" },
+                              { value: "Marketing / Growth" },
+                              { value: "Leadership / Careers" },
+                            ]}
+                          />
+                        </Form.Item>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          <Form.Item
+                            name="experience"
+                            label="Experience (years)"
+                          >
+                            <Input size="large" placeholder="e.g., 3–5 years" />
+                          </Form.Item>
+                          <Form.Item name="availability" label="Availability">
+                            <Input
+                              size="large"
+                              prefix={<ScheduleOutlined />}
+                              placeholder="e.g., 2 hrs/week"
+                            />
+                          </Form.Item>
+                        </div>
+
+                        <Form.Item
+                          name="portfolioUrl"
+                          label="Portfolio / LinkedIn (optional)"
+                        >
+                          <Input size="large" placeholder="https://…" />
+                        </Form.Item>
+
+                        <Form.Item name="message" label="Message">
+                          <Input.TextArea
+                            rows={5}
+                            placeholder="Tell us who you’d like to mentor and how you can help."
+                          />
+                        </Form.Item>
+
+                        {/* Honeypot */}
+                        <Form.Item name="website" className="hidden">
+                          <input type="text" tabIndex={-1} autoComplete="off" />
+                        </Form.Item>
+
+                        <Button
+                          htmlType="submit"
+                          type="primary"
+                          size="large"
+                          className="!bg-[var(--yplus-primary,#ead61f)] !text-black hover:!opacity-90"
+                          loading={loading}
+                        >
+                          Join as a mentor
+                        </Button>
+                      </Form>
+                    ),
+                  },
+
                   {
                     key: "volunteer",
                     label: (
@@ -375,14 +535,13 @@ export default function PartnerWithUs() {
               />
             </div>
           </div>
-
           {/* Right: Sponsorship / Partners CTA */}
           <aside className="lg:col-span-1">
             <div className="rounded-2xl border border-black/10 bg-white p-5">
               <div className="flex items-center gap-2">
                 <BankOutlined className="text-xl" />
                 <h3 className="text-lg font-semibold">
-                  Organizations & Sponsors
+                  Partnerships & Sponsorships
                 </h3>
               </div>
               <p className="mt-2 text-black/75">
@@ -400,21 +559,42 @@ export default function PartnerWithUs() {
 
               <Divider className="my-4" />
 
-              <a
-                href={`mailto:${EMAIL}?subject=${encodeURIComponent(
-                  "Sponsorship / Partnership inquiry"
-                )}`}
-                className="inline-block"
-              >
+              <div className="flex flex-col gap-2">
+                {/* keep these as mailto for now */}
                 <Button
                   type="primary"
                   size="large"
                   className="!bg-[var(--yplus-primary,#ead61f)] !text-black hover:!opacity-90"
                 >
-                  Start a sponsorship conversation
+                  Sponsor Connect Series
                 </Button>
-              </a>
+
+                <Button
+                  type="primary"
+                  size="large"
+                  className="!bg-[var(--yplus-primary,#ead61f)] !text-black hover:!opacity-90"
+                >
+                  Sponsor Youth+ Radio
+                </Button>
+
+                {/* this one opens the modal */}
+                <Button
+                  type="primary"
+                  size="large"
+                  className="!bg-[var(--yplus-primary,#ead61f)] !text-black hover:!opacity-90"
+                  onClick={() => setSponsorOpen(true)}
+                >
+                  Sponsor Youth+ Festival
+                </Button>
+              </div>
             </div>
+
+            {/* modal */}
+            <SponsorshipModal
+              open={sponsorOpen}
+              onClose={() => setSponsorOpen(false)}
+              email={EMAIL}
+            />
           </aside>
         </div>
       </div>

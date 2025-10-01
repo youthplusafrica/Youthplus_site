@@ -2,18 +2,19 @@ import { TeamMember } from "../components/TeamMemberCard";
 
 export const TEAM: TeamMember[] = [
   {
-    name: "Your Name",
+    name: "Freddy Mulli",
     role: "Founder & CEO",
     headshot: "/images/team/ceo.jpg",
     bio: "Entrepreneur and community builder focused on youth, culture, and innovation across Africa.",
     linkedin: "https://linkedin.com/in/your-handle",
-    email: "hello@youthplusafrica.com"
+    email: "freddy@youthplusafrica.com"
   },
   {
-    name: "Second Person",
-    role: "Programs Lead",
-    headshot: "/images/team/programs.jpg",
-    bio: "Leads training programs and partnerships with a focus on impact and scale.",
+    name: "Samuel Muli",
+    role: "Software Engineer",
+    headshot: "/images/Muli.jpeg",
+    bio: "Loves to code and build things.",
     linkedin: "https://linkedin.com/in/second",
+    email: "sam@youthplusafrica.com"
   },
 ];

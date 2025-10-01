@@ -17,93 +17,95 @@ export const VENTURES: Venture[] = [
     events: [
       // EXAMPLES — replace with your real sessions (keep YYYY-MM-DD for filtering)
       {
-        title: "Connect: Creative Careers – Nairobi",
-        date: "2025-06-15",
-        location: "Nairobi",
-        imageSrc: "/images/events/connect-nairobi-2025-06.jpg",
-        description: "Portfolio, pitching, and pathways with industry mentors.",
+        title: "Connect: Dear Money",
+        date: "2025-07-15",
+        location: "ALX the Piano, Brookside Dr.",
+        imageSrc: "/images/connect-dear-money.jpeg",
+        description: "A journaling journey through your money past, present and potential.",
         details:
-          "Hands-on sessions across design, media, and entrepreneurship. Cohort showcases plus partner networking.",
-        galleryUrl: "https://photos.app.goo.gl/your-album",
-        youtubeUrl: "https://www.youtube.com/watch?v=yourvideo",
-        hasFutureEvents: false,
+          "Participants walked away with complete clarity on your money blocks and limiting beliefs, practical tools to rewrite your financial story, a supportive community of like minded individuals, actionable strategies you can implement immediately and the confidence to make better money decisions.",
+        galleryUrl: "https://youthplusafrica.pixieset.com/connect-dear-money/",
+        hasFutureEvents: true,
+        link: "https://forms.gle/An82V5NKZqu76Dwz6",
       },
       {
-        title: "Connect: Business Basics – Kigali",
-        date: "2025-02-10",
-        location: "Kigali",
-        imageSrc: "/images/events/connect-kigali-2025-02.jpg",
-        description: "Registration, compliance, cashflow, and pitching for early founders.",
-        hasFutureEvents: false,
+        title: "Connect: Digital Presence",
+        date: "2025-08-16",
+        location: "Online",
+        imageSrc: "/images/connect-dpresence.jpeg",
+        description: "How your online image shapes your opportunities",
+        details: "Your digital presence is your new business card! In today's world, opportunities find you online befor they find you offline. Your digital presence isn't just nice to have - it's essential for career growth, business success and personal branding.",
+        hasFutureEvents: true,
+        link: "https://forms.gle/An82V5NKZqu76Dwz6"
       },
     ],
   },
 
   // --- WE CREATE ---
-  {
-    id: "youthplus-radio",
-    name: "Youth+ Radio",
-    blurb:
-      "Evergreen youth-led content highlighting impact stories and entrepreneurs across Africa (shows include SaniiSanaa, H.E.R., and INC/Biashara 101).",
-    events: [
-      {
-        title: "Youth+ Radio Live: Founders Night",
-        date: "2025-05-23",
-        location: "Nairobi",
-        imageSrc: "/images/events/radio-live-2025-05.jpg",
-        description: "Live taping with founders on building in Africa.",
-        youtubeUrl: "https://www.youtube.com/watch?v=yourvideo3",
-        hasFutureEvents: false,
-      },
-      {
-        title: "H.E.R. Special – Women in Leadership",
-        date: "2024-12-08",
-        location: "Nairobi",
-        imageSrc: "/images/events/radio-her-2024-12.jpg",
-        description: "A live H.E.R. session with women champions in business and society.",
-        youtubeUrl: "https://www.youtube.com/watch?v=yourvideo4",
-        hasFutureEvents: false,
-      },
-    ],
-  },
+  // {
+  //   id: "youthplus-radio",
+  //   name: "Youth+ Radio",
+  //   blurb:
+  //     "Evergreen youth-led content highlighting impact stories and entrepreneurs across Africa (shows include SaniiSanaa, H.E.R., and INC/Biashara 101).",
+  //   events: [
+  //     {
+  //       title: "Youth+ Radio Live: Founders Night",
+  //       date: "2025-05-23",
+  //       location: "Nairobi",
+  //       imageSrc: "/images/events/radio-live-2025-05.jpg",
+  //       description: "Live taping with founders on building in Africa.",
+  //       youtubeUrl: "https://www.youtube.com/watch?v=yourvideo3",
+  //       hasFutureEvents: false,
+  //     },
+  //     {
+  //       title: "H.E.R. Special – Women in Leadership",
+  //       date: "2024-12-08",
+  //       location: "Nairobi",
+  //       imageSrc: "/images/events/radio-her-2024-12.jpg",
+  //       description: "A live H.E.R. session with women champions in business and society.",
+  //       youtubeUrl: "https://www.youtube.com/watch?v=yourvideo4",
+  //       hasFutureEvents: false,
+  //     },
+  //   ],
+  // },
 
   // --- WE LEAD ---
-  {
-    id: "podquest",
-    name: "PodQuest",
-    blurb:
-      "A Youth+ Radio competition (launched 2024) to discover novel, creative podcasts—culminating in a finals Demo Day.",
-    events: [
-      {
-        title: "PodQuest 2025 – Demo Day",
-        date: "2025-08-10",
-        location: "Nairobi",
-        imageSrc: "/images/events/podquest-2025-08.jpg",
-        description: "Finalists present pilot episodes to a live audience and judges.",
-        youtubeUrl: "https://www.youtube.com/watch?v=yourvideo5",
-        galleryUrl: "https://photos.app.goo.gl/your-album-3",
-        hasFutureEvents: false,
-      },
-    ],
-  },
-  {
-    id: "youthplus-festival",
-    name: "Youth+ Festival",
-    blurb:
-      "East Africa’s fast-growing youth entrepreneurship festival—keynotes, masterclasses, skills villages, and policy dialogue with regional leaders.",
-    events: [
-      {
-        title: "Youth+ Festival 2025",
-        date: "2025-11-12",
-        location: "Nairobi",
-        imageSrc: "/images/events/festival-2025-11.jpg",
-        description: "Flagship youth culture & entrepreneurship forum.",
-        details:
-          "A culmination of the year’s activities—training, creation, growth, and leadership—featuring leaders and partners across Africa.",
-        youtubeUrl: "https://www.youtube.com/watch?v=yourfestivalvideo",
-        galleryUrl: "https://photos.app.goo.gl/your-festival-album",
-        hasFutureEvents: false,
-      },
-    ],
-  },
+  // {
+  //   id: "podquest",
+  //   name: "PodQuest",
+  //   blurb:
+  //     "A Youth+ Radio competition (launched 2024) to discover novel, creative podcasts—culminating in a finals Demo Day.",
+  //   events: [
+  //     {
+  //       title: "PodQuest 2025 – Demo Day",
+  //       date: "2025-08-10",
+  //       location: "Nairobi",
+  //       imageSrc: "/images/events/podquest-2025-08.jpg",
+  //       description: "Finalists present pilot episodes to a live audience and judges.",
+  //       youtubeUrl: "https://www.youtube.com/watch?v=yourvideo5",
+  //       galleryUrl: "https://photos.app.goo.gl/your-album-3",
+  //       hasFutureEvents: false,
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: "youthplus-festival",
+  //   name: "Youth+ Festival",
+  //   blurb:
+  //     "East Africa’s fast-growing youth entrepreneurship festival—keynotes, masterclasses, skills villages, and policy dialogue with regional leaders.",
+  //   events: [
+  //     {
+  //       title: "Youth+ Festival 2025",
+  //       date: "2025-11-12",
+  //       location: "Nairobi",
+  //       imageSrc: "/images/events/festival-2025-11.jpg",
+  //       description: "Flagship youth culture & entrepreneurship forum.",
+  //       details:
+  //         "A culmination of the year’s activities—training, creation, growth, and leadership—featuring leaders and partners across Africa.",
+  //       youtubeUrl: "https://www.youtube.com/watch?v=yourfestivalvideo",
+  //       galleryUrl: "https://photos.app.goo.gl/your-festival-album",
+  //       hasFutureEvents: false,
+  //     },
+  //   ],
+  // },
 ];

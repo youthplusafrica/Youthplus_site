@@ -3,8 +3,8 @@
 import EventCard from "../components/EventCard";
 import FooterMain from "../components/FooterMain";
 import HeaderNav from "../components/HeaderNav";
+import SectionWithBg from "../components/SectionWithBg";
 import { VENTURES } from "../content/ventures";
-
 
 // helper: filter to last 365 days (keeps your original event order)
 function isWithinLastYear(dateStr: string): boolean {
@@ -12,7 +12,11 @@ function isWithinLastYear(dateStr: string): boolean {
   const dt = new Date(y || 0, (m || 1) - 1, d || 1);
   if (isNaN(dt.getTime())) return false;
   const now = new Date();
-  const oneYearAgo = new Date(now.getFullYear() - 1, now.getMonth(), now.getDate());
+  const oneYearAgo = new Date(
+    now.getFullYear() - 1,
+    now.getMonth(),
+    now.getDate()
+  );
   return dt >= oneYearAgo;
 }
 
@@ -21,10 +25,15 @@ export default function VenturesPage() {
     <>
       <HeaderNav />
 
-      <main className="mx-auto max-w-6xl px-6 py-12 md:py-16">
+      <SectionWithBg
+        src="/images/ventures-bg-2.jpeg"
+        alt="Youth+ events background"
+        overlay={60}
+        className="py-12 md:py-16"
+      >
         <header className="mb-8">
-          <h1 className="text-3xl font-bold">Ventures</h1>
-          <p className="text-black/70 mt-1">
+          <h1 className="text-3xl font-bold text-white">Ventures</h1>
+          <p className="text-white/80 mt-1">
             Explore our ventures and see highlights from the past year.
           </p>
         </header>
@@ -35,14 +44,14 @@ export default function VenturesPage() {
             <section key={v.id} id={v.id} className="scroll-mt-24">
               <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
                 <div>
-                  <h2 className="text-2xl font-semibold">{v.name}</h2>
-                  {v.blurb && <p className="text-black/70 mt-1">{v.blurb}</p>}
+                  <h2 className="text-2xl font-semibold text-white">{v.name}</h2>
+                  {v.blurb && <p className="text-black/70 mt-1 text-white/80">{v.blurb}</p>}
                 </div>
                 <div className="hidden md:block h-1 w-36 bg-[var(--yplus-primary,#ead61f)] rounded-full" />
               </div>
 
               {recent.length === 0 ? (
-                <p className="mt-5 text-black/60">
+                <p className="mt-5 text-white/80">
                   No events in the last 12 months. Check back soon.
                 </p>
               ) : (
@@ -57,7 +66,7 @@ export default function VenturesPage() {
             </section>
           );
         })}
-      </main>
+      </SectionWithBg>
 
       <FooterMain />
     </>
