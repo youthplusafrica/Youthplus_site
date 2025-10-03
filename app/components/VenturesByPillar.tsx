@@ -251,7 +251,7 @@ export default function VenturesByPillar({
                       />
 
                       {/* dimmer (visible on hover desktop; visible by default on mobile for readability) */}
-                      <div className="absolute inset-0 bg-black/45 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity" />
+                      <div className="absolute inset-0 bg-black/65 opacity-100 transition-opacity" />
 
                       {/* Logo badge */}
                       {(v.logo || v.name) && (

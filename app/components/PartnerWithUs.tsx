@@ -21,7 +21,6 @@ import {
   SolutionOutlined,
 } from "@ant-design/icons";
 import { useMemo, useState } from "react";
-import SponsorshipModal from "./SponsorshipModal";
 
 type BaseValues = {
   fullName: string;
@@ -45,31 +44,35 @@ type VolunteerValues = BaseValues & {
 
 type MentorValues = BaseValues & {
   mentorAreas: string[];
-  experience?: string; // e.g., "3–5 years"
-  availability?: string; // e.g., "Weekends"
-  portfolioUrl?: string; // LinkedIn/portfolio
+  experience?: string;
+  availability?: string;
+  portfolioUrl?: string;
 };
 
-const EMAIL = "partnerships@youthplusafrica.com"; // change if needed
+const EMAILS = {
+  volunteer: "support@youthplusafrica.com",
+  facilitator: "freddy@youthplusafrica.com",
+  mentor: "freddy@youthplusafrica.com",
+  sponsorships: "geoffrey@youthplusafrica.com",
+};
 
 export default function PartnerWithUs() {
   const [loading, setLoading] = useState(false);
-  const mailto = useMemo(() => EMAIL, []);
-  const [sponsorOpen, setSponsorOpen] = useState(false);
+  // const mailto = useMemo(() => EMAIL, []);
 
   const sendMail = (
+    to: string,
     subject: string,
     bodyLines: Record<string, string | string[] | undefined>
   ) => {
     const body = Object.entries(bodyLines)
       .filter(([, v]) => v !== undefined && v !== "")
-      .map(([k, v]) => {
-        if (Array.isArray(v)) return `${k}: ${v.join(", ")}`;
-        return `${k}: ${v}`;
-      })
+      .map(([k, v]) =>
+        Array.isArray(v) ? `${k}: ${v.join(", ")}` : `${k}: ${v}`
+      )
       .join("\n");
 
-    const url = `mailto:${mailto}?subject=${encodeURIComponent(
+    const url = `mailto:${to}?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(body)}`;
     window.location.href = url;
@@ -79,7 +82,7 @@ export default function PartnerWithUs() {
     if (values.website) return; // honeypot
     setLoading(true);
     try {
-      sendMail("Facilitator/Trainer partnership interest", {
+      sendMail(EMAILS.facilitator, "Facilitator/Trainer partnership interest", {
         "Full name": values.fullName,
         Email: values.email,
         Phone: values.phone,
@@ -98,7 +101,7 @@ export default function PartnerWithUs() {
     if (values.website) return;
     setLoading(true);
     try {
-      sendMail("Volunteer partnership interest", {
+      sendMail(EMAILS.volunteer, "Volunteer partnership interest", {
         "Full name": values.fullName,
         Email: values.email,
         Phone: values.phone,
@@ -117,7 +120,7 @@ export default function PartnerWithUs() {
     if (values.website) return; // honeypot
     setLoading(true);
     try {
-      sendMail("Mentor partnership interest", {
+      sendMail(EMAILS.mentor, "Mentor partnership interest", {
         "Full name": values.fullName,
         Email: values.email,
         Phone: values.phone,
@@ -131,6 +134,26 @@ export default function PartnerWithUs() {
     } finally {
       setLoading(false);
     }
+  };
+
+  const sponsorHref = (topic: string) => {
+    const subject = `Sponsorship inquiry — ${topic}`;
+    const body = [
+      `Hello Youth+ Africa team,`,
+      ``,
+      `I’m interested in sponsoring ${topic}. Please share the sponsorship packages and next steps.`,
+      ``,
+      `Company:`,
+      `Contact name:`,
+      `Phone:`,
+      `Estimated budget:`,
+      ``,
+      `Thanks,`,
+    ].join("\n");
+
+    return `mailto:${EMAILS.sponsorships}?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
   };
 
   return (
@@ -561,40 +584,44 @@ export default function PartnerWithUs() {
 
               <div className="flex flex-col gap-2">
                 {/* keep these as mailto for now */}
-                <Button
-                  type="primary"
-                  size="large"
-                  className="!bg-[var(--yplus-primary,#ead61f)] !text-black hover:!opacity-90"
+                <a
+                  href={sponsorHref("Connect Series")}
+                  className="inline-block"
                 >
-                  Sponsor Connect Series
-                </Button>
+                  <Button
+                    type="primary"
+                    size="large"
+                    className="!bg-[var(--yplus-primary,#ead61f)] !text-black hover:!opacity-90"
+                  >
+                    Sponsor Connect Series
+                  </Button>
+                </a>
 
-                <Button
-                  type="primary"
-                  size="large"
-                  className="!bg-[var(--yplus-primary,#ead61f)] !text-black hover:!opacity-90"
-                >
-                  Sponsor Youth+ Radio
-                </Button>
+                <a href={sponsorHref("Youth+ Radio")} className="inline-block">
+                  <Button
+                    type="primary"
+                    size="large"
+                    className="!bg-[var(--yplus-primary,#ead61f)] !text-black hover:!opacity-90"
+                  >
+                    Sponsor Youth+ Radio
+                  </Button>
+                </a>
 
                 {/* this one opens the modal */}
-                <Button
-                  type="primary"
-                  size="large"
-                  className="!bg-[var(--yplus-primary,#ead61f)] !text-black hover:!opacity-90"
-                  onClick={() => setSponsorOpen(true)}
+                <a
+                  href={sponsorHref("Youth+ Festival")}
+                  className="inline-block"
                 >
-                  Sponsor Youth+ Festival
-                </Button>
+                  <Button
+                    type="primary"
+                    size="large"
+                    className="!bg-[var(--yplus-primary,#ead61f)] !text-black hover:!opacity-90"
+                  >
+                    Sponsor Youth+ Festival
+                  </Button>
+                </a>
               </div>
             </div>
-
-            {/* modal */}
-            <SponsorshipModal
-              open={sponsorOpen}
-              onClose={() => setSponsorOpen(false)}
-              email={EMAIL}
-            />
           </aside>
         </div>
       </div>

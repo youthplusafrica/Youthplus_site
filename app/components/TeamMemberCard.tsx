@@ -20,7 +20,7 @@ export type TeamMember = {
 export default function TeamMemberCard({ m }: { m: TeamMember }) {
   return (
     <article className="group rounded-2xl border border-black/10 bg-white overflow-hidden hover:shadow-lg transition">
-      <div className="relative h-56 w-full bg-black/5">
+      <div className="relative h-64 md:h-96 w-full bg-black/5">
         {m.headshot && (
           <Image
             src={m.headshot}
@@ -36,7 +36,7 @@ export default function TeamMemberCard({ m }: { m: TeamMember }) {
       <div className="p-4">
         <h3 className="text-lg font-semibold">{m.name}</h3>
         <p className="text-black/70">{m.role}</p>
-        {m.bio && <p className="mt-2 text-black/80 line-clamp-3">{m.bio}</p>}
+        {m.bio && <p className="mt-2 text-black/80">{m.bio}</p>}
 
         <div className="mt-3 flex items-center gap-2">
           {m.linkedin && (

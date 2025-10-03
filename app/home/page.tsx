@@ -17,7 +17,7 @@ export default function Home() {
         title="Empowering Africa’s youth to build, create, and lead."
         subtitle="We bridge talent and opportunity across training, creation, growth, and leadership."
         align="left"
-        bgSrc="/images/hero.jpg"
+        bgSrc="/images/youth-home.jpg"
       />
       <BackStoryDual />
 
@@ -38,7 +38,7 @@ export default function Home() {
 needed to capitalize on opportunities that drive economic change."
         vision="An economically empowered African youth tackling challenges
 through innovation, collaboration and social enterprise."
-        imageSrc="/images/about.jpg" // optional; place in /public/images/about/cover.jpg
+        imageSrc="/images/youth-about-2.jpg" // optional; place in /public/images/about/cover.jpg
         imageAlt="Youth+ Africa team and community"
         imageLeft={true}
       />

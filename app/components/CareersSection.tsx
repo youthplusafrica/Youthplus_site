@@ -47,7 +47,7 @@ export default function CareersSection({ jobs }: { jobs: Job[] }) {
         {jobs.length === 0 ? (
           <p className="mt-8 text-black/60">
             No open roles right now. You can still{" "}
-            <a href="mailto:hello@youthplusafrica.com" className="underline decoration-[var(--yplus-primary,#ead61f)] underline-offset-2">
+            <a href="mailto:freddy@youthplusafrica.com" className="underline decoration-[var(--yplus-primary,#ead61f)] underline-offset-2">
               send us your CV
             </a>
             .

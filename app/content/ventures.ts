@@ -1,9 +1,9 @@
 import { EventItem } from "../components/EventCard";
 
 export type Venture = {
-  id: string;          // slug, used for #anchors and links
-  name: string;        // display name
-  blurb?: string;      // short description
+  id: string; // slug, used for #anchors and links
+  name: string; // display name
+  blurb?: string; // short description
   events: EventItem[]; // add all events; the page filters to last 12 months
 };
 
@@ -21,7 +21,8 @@ export const VENTURES: Venture[] = [
         date: "2025-07-15",
         location: "ALX the Piano, Brookside Dr.",
         imageSrc: "/images/connect-dear-money.jpeg",
-        description: "A journaling journey through your money past, present and potential.",
+        description:
+          "A journaling journey through your money past, present and potential.",
         details:
           "Participants walked away with complete clarity on your money blocks and limiting beliefs, practical tools to rewrite your financial story, a supportive community of like minded individuals, actionable strategies you can implement immediately and the confidence to make better money decisions.",
         galleryUrl: "https://youthplusafrica.pixieset.com/connect-dear-money/",
@@ -34,9 +35,24 @@ export const VENTURES: Venture[] = [
         location: "Online",
         imageSrc: "/images/connect-dpresence.jpeg",
         description: "How your online image shapes your opportunities",
-        details: "Your digital presence is your new business card! In today's world, opportunities find you online befor they find you offline. Your digital presence isn't just nice to have - it's essential for career growth, business success and personal branding.",
+        details:
+          "Your digital presence is your new business card! In today's world, opportunities find you online befor they find you offline. Your digital presence isn't just nice to have - it's essential for career growth, business success and personal branding.",
         hasFutureEvents: true,
-        link: "https://forms.gle/An82V5NKZqu76Dwz6"
+        link: "https://forms.gle/An82V5NKZqu76Dwz6",
+      },
+      {
+        title: "Connect: Charting the Capital of You.",
+        date: "2025-09-26",
+        location: "LaunchPad Coworking, Westlands Avenue",
+        imageSrc: "/images/connect-fxpesa.jpeg",
+        description:
+          "Flagship youth culture & policy forum bringing creators, leaders, and partners together.",
+        link: "https://forms.gle/An82V5NKZqu76Dwz6",
+        details:
+          "Do you know how investing, trading and forex actually work? Or how financial markets move money? This month we've got you covered! Connect by Youth+ Africa in Partnership with FXPesa will break it down for you. What's in it for you? You get to learn financial markets in a simple and practical way, place your first ever demo trade live and also stand a chance to win a $200 live trading account.",
+        hasFutureEvents: false,
+        galleryUrl:
+          "https://youthplusafrica.pixieset.com/chartingthecapitalofyou/",
       },
     ],
   },

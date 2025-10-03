@@ -1,6 +1,10 @@
 import { EventItem } from "../components/EventCard";
 
 export const UPCOMING_EVENTS: EventItem[] = [
+  
+];
+
+export const PAST_EVENTS: EventItem[] = [
   {
     title: "Connect: Charting the Capital of You.",
     date: "Friday 26, Sep 2025, 2PM - 6PM",
@@ -11,11 +15,9 @@ export const UPCOMING_EVENTS: EventItem[] = [
     link: "https://forms.gle/An82V5NKZqu76Dwz6",
     details:
       "Do you know how investing, trading and forex actually work? Or how financial markets move money? This month we've got you covered! Connect by Youth+ Africa in Partnership with FXPesa will break it down for you. What's in it for you? You get to learn financial markets in a simple and practical way, place your first ever demo trade live and also stand a chance to win a $200 live trading account.",
-    hasFutureEvents: true,
+    hasFutureEvents: false,
+    galleryUrl: "https://youthplusafrica.pixieset.com/chartingthecapitalofyou/"
   },
-];
-
-export const PAST_EVENTS: EventItem[] = [
   {
     title: "The Currency of Exchange",
     date: "30th August 2025, 9AM - 3PM",
