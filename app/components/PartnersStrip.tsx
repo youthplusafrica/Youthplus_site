@@ -40,7 +40,7 @@ export default function PartnersStrip({
         className ?? ""
       }`}
       style={
-        { ["--marquee-duration" as any]: `${durationSec}s` } as React.CSSProperties
+        { ["--marquee-duration"]: `${durationSec}s` } as React.CSSProperties
       }
     >
       <div className="mx-auto max-w-6xl px-6 py-12 md:py-16">
