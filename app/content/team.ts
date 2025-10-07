@@ -16,9 +16,9 @@ export const TEAM: TeamMember[] = [
     email: "sam@youthplusafrica.com"
   },
   {
-    name: "Geoffrey Mumbo",
+    name: "Jeff Geoffrey",
     role: "Project Manager",
-    headshot: "/images/jeff.jpg",
+    headshot: "/images/jeff_2.jpg",
     linkedin: "https://www.linkedin.com/in/jeff-geoffry-mumbo-91259311b",
     email: "geoffrey@youthplusafrica.com"
   },
