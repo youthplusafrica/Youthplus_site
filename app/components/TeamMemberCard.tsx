@@ -20,7 +20,7 @@ export type TeamMember = {
 export default function TeamMemberCard({ m }: { m: TeamMember }) {
   return (
     <article className="group rounded-2xl border border-black/10 bg-white overflow-hidden hover:shadow-lg transition">
-      <div className="relative h-64 md:h-96 w-full bg-black/5">
+      <div className="relative h-64 md:h-80 w-full bg-black/5">
         {m.headshot && (
           <Image
             src={m.headshot}

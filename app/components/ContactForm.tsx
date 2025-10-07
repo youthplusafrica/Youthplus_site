@@ -14,7 +14,7 @@ type Values = {
 
 export default function ContactForm() {
   const [submitting, setSubmitting] = useState(false);
-  const mailTo = useMemo(() => "hello@youthplusafrica.com", []);
+  const mailTo = useMemo(() => "support@youthplusafrica.com", []);
 
   const onFinish = async (values: Values) => {
     if (values.website) return; // honeypot filled -> ignore
