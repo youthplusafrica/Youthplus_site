@@ -41,7 +41,7 @@ const VENTURES: Venture[] = [
     logo: "/images/connect-logo.png",
     logoAlt: "Connect logo",
     overlayDescription:
-      "Connect is a curated series of high-impact training workshops bringing together Africa’s young changemakers, innovators, and creators. These sessions spotlight real conversations, skill-building, and networking that empower young people to lead innovation and social transformation. Your support can directly contribute to:",
+      "A curated series of high-impact training workshops bringing together Africa’s young changemakers, innovators, and creators. Your support can directly contribute to:",
     overlayBullets: [
       "Building entrepreneurial mindsets",
       "Promoting thought leadership",
@@ -59,8 +59,7 @@ const VENTURES: Venture[] = [
       },
       { value: "15+", label: "New businesses started by participants" },
     ],
-    overlayMediaAlt: "Connect workshop",
-    externalLink: "#",
+    overlayMediaAlt: "Connect workshop"
   },
   {
     name: "AppSkill",
@@ -71,16 +70,10 @@ const VENTURES: Venture[] = [
     overlayContent: (
       <div>
         <p>
-          AppSkill is a mobile app-based, on-demand learning platform that
+          A mobile app-based, on-demand learning platform that
           provides young professionals and aspiring/existing entrepreneurs the
           opportunity to sharpen their business acumen through effective
-          training, practice & mentorship. AppSkill offers tailored vocational
-          and training programmes to cater for differences in educational and
-          vocational backgrounds, designed for professionals founders, startup
-          teams and aspiring entrepreneurs, covering soft skills such as Public
-          Speaking, The Art Of Negotiation, Building Teams, Leading Others,
-          etc., and more professional skills such as Raising Capital, Crafting
-          Resilient Strategies, Building Sustainable Business Models, etc.
+          training, practice & mentorship.
         </p>
         <p className="mt-3 text-sm text-[var(--yplus-primary,#ead61f)] font-semibold">
           Development Phase
@@ -90,7 +83,7 @@ const VENTURES: Venture[] = [
           After piloting the MVP version of the application, and gathering
           feedback on the user interface, user experience and content on the
           platform, we have moved into the development of the Beta version of
-          the application, to be completed in September 2025.
+          the application, to be completed in September 2026.
         </p>
       </div>
     ),
@@ -100,7 +93,7 @@ const VENTURES: Venture[] = [
     pillar: "WE CREATE",
     coverImage: "/images/radio.jpg",
     overlayDescription:
-      "We deliver on the promise of Youth+ Africa through creating evergreen content, highlighting stories of impact and bringing to the forefront, inspiring entrepreneurs creating change across the continent. The programming of Youth+ Radio is broken down into 3 segments:",
+      "We deliver on the promise of Youth+ Africa through creating evergreen content, highlighting stories of impact and bringing to the forefront, inspiring entrepreneurs creating change across the continent.",
     impacts: [
       {
         value: "73.7K",
@@ -113,26 +106,24 @@ const VENTURES: Venture[] = [
       },
       { value: "1.1K+", label: "Subscribers across YouTube and Spotify" },
     ],
-    overlayBullets: [
-      <>
-        <span className="font-bold">SaniiSanaa</span>: a show dedicated to
-        highlighting the ins and outs, ups and downs & intricacies among
-        creatives, and bringing opportunities for
-        youth to succeed.
-      </>,
-      <>
-        <span className="font-bold">Meet HER</span>: with a focus on stories of
-        women champions in business, leadership and society at large, H.E.R.
-        speaks to stories of courage, influence and breathtaking innovations
-        from young women across the continent.
-      </>,
-      <>
-        <span className="font-bold">INC</span>: whether discussing the basics of
-        registering a business, highlighting successful, self-made
-        entrepreneurs, Biashara 101 is your go-to show for everything business.
-      </>,
-    ],
-    externalLink: "#",
+    // overlayBullets: [
+    //   <>
+    //     <span className="font-bold">SaniiSanaa</span>: a show dedicated to
+    //     highlighting the ins and outs, ups and downs & intricacies among
+    //     creatives, and bringing opportunities for
+    //     youth to succeed.
+    //   </>,
+    //   <>
+    //     <span className="font-bold">Meet HER</span>: with a focus on stories of
+    //     women champions in business, leadership and society at large.
+    //   </>,
+    //   <>
+    //     <span className="font-bold">INC</span>: whether discussing the basics of
+    //     registering a business, highlighting successful, self-made
+    //     entrepreneurs, Biashara 101 is your go-to show for everything business.
+    //   </>,
+    // ],
+    externalLink: "https://www.youtube.com/@youthplusradio",
   },
   {
     name: "Stream",
@@ -144,15 +135,8 @@ const VENTURES: Venture[] = [
         <p>
           Stream+ (Stream Ampersand Network), is an on-demand content platform
           developed to provide creators and media practitioners a centralized,
-          revenue- generating platform from which they can recoup their
+          revenue-generating platform from which they can recoup their
           investment through a more efficient pathway to profitability.
-        </p>
-        <p className="mt-3">
-          The platform integrates a hybrid of subscription-based and
-          pay-per-view business models for creators, allowing them to achieve
-          revenue milestones faster than existing platforms, validating the
-          business case for their content and bridging the gap between ideation
-          and distribution for young creators.
         </p>
         <p className="mt-3 text-sm text-[var(--yplus-primary,#ead61f)] font-semibold">
           Development Phase
@@ -162,12 +146,11 @@ const VENTURES: Venture[] = [
           The streaming platform is currently in development, with key
           functionalities such as Pay-Per-View, direct payment integration for
           creators, account security and content anti-piracy measures being the
-          focus on ongoing product development.
+          focus.
         </p>
       </div>
     ),
     impacts: [{ value: "Pilot", label: "Underway" }],
-    externalLink: "#",
   },
   {
     name: "All AXS",
@@ -175,13 +158,12 @@ const VENTURES: Venture[] = [
     coverImage: "/images/Allaxs.png",
     logo: "/images/AllAxsLogo.png",
     overlayDescription:
-      "All Aggregated Xperiential Stores (All AXS) was envisioned as a gateway to open the doors of opportunity to Young Creators and Curators, Community Event Organizers and Digital/Virtual Event Planners, putting the control of the sale of tickets, merchandise and services into the hands of young creators. Our goals is to collaborate with communities, creatives and curators of immersive and inclusive events across live and virtual experiences, offering a uniquely accessible, user-friendly and enterprise first platform for our stakeholders to popularize and commercialize their event experiences.",
+      "All Aggregated Xperiential Stores (All AXS) was envisioned as a gateway to open doors of opportunity to Creators, Event Organizers and Digital/Virtual Event Planners, putting the control of the ticket sales, merchandise and services into the hands of creators. Our goal is to collaborate with communities, creatives and curators of events across live and virtual experiences, offering an accessible, user-friendly and enterprise first platform for our stakeholders to popularize and commercialize their event experiences.",
     impacts: [
       { value: "10+", label: "Creators and Small Business Partnered With" },
       { value: "3M+", label: "In ticket sales from creators using the platform for live and virtual events." },
 			{ value: "1.1K+", label: "Subscribers across YouTube and Spotify"}
-    ],
-    externalLink: "#",
+    ]
   },
   {
     name: "PodQuest",
@@ -189,13 +171,12 @@ const VENTURES: Venture[] = [
     coverImage: "/images/podquest.jpg",
     logo: "/images/PodQuest.png",
     overlayDescription:
-      "'PodQuest' is an exciting competition by Youth+ Radio aimed at discovering the freshest, most novel and creative podcast out there, kickstarted in 2024! Kicking off during International Youth Month, the competition will span 8 weeks, culminating in a grand finale dubbed Demo Day, where finalists present their pilot episodes in front of our panel of judges and a live audience.",
+      "A competition by Youth+ Radio aimed at discovering the most novel and creative podcast out there, kickstarted in 2024! The competition spans 8 weeks, culminating in a grand finale dubbed Demo Day, where finalists present their pilot episodes in front of our panel of judges and a live audience.",
     impacts: [
       { value: "50+", label: "Total Podcast Idea submissions in the inaugural competition" },
       { value: "10", label: "Mentors and Judges that mentored the Finalists over a 4-week program and Demo Day finals." },
 			{ value: "4", label: "Overall Winners and Podcasts birthed from the Inaugural #PodQuest2024"}
-    ],
-    externalLink: "#",
+    ]
   },
   {
     name: "Youth+ Festival",
@@ -203,13 +184,12 @@ const VENTURES: Venture[] = [
     coverImage: "/images/festival-1.jpg",
     logo: "/images/youthplus_festival.png",
     overlayDescription:
-      "All Aggregated Xperiential Stores (All AXS) was envisioned as a gateway to open the doors of opportunity to Young Creators and Curators, Community Event Organizers and Digital/Virtual Event Planners, putting the control of the sale of tickets, merchandise and services into the hands of young creators. Our goals is to collaborate with communities, creatives and curators of immersive and inclusive events across live and virtual experiences, offering a uniquely accessible, user-friendly and enterprise first platform for our stakeholders to popularize and commercialize their event experiences.",
+      "East Africa’s largest youth entrepreneurship Festival, bringing together over 4,000 youth in its first 2 editions, highlighted by keynotes, masterclasses and skill villages featuring global business leaders.",
     impacts: [
       { value: "4800+", label: "Youth in attendance over the first 2 editions of the Youth+ Festival." },
       { value: "65+", label: "Business Leaders, Captains of Industry and Partners collaborated with as Speakers, Panelists and Trainers" },
 			{ value: "3.5M+", label: "Aggregated reach across social media, reaching over 8 countries in East, West and Southern Africa"}
-    ],
-    externalLink: "#",
+    ]
   },
 ];
 
@@ -277,7 +257,7 @@ export default function VenturesByPillar({
 
                       {/* OVERLAY CONTENT */}
                       <div className="absolute inset-0 p-5 flex flex-col justify-end">
-                        <h4 className="text-xl font-bold text-white">
+                        <h4 className="text-base md:text-xl font-bold text-white">
                           {v.name}
                         </h4>
 
@@ -292,7 +272,7 @@ export default function VenturesByPillar({
                             {/* Text column */}
                             <div className="md:col-span-8">
                               {v.overlayDescription && (
-                                <p className="text-white/90 text-xs md:text-base">
+                                <p className="text-white/90 text-[10px] md:text-base">
                                   {v.overlayDescription}
                                 </p>
                               )}
@@ -349,7 +329,7 @@ export default function VenturesByPillar({
                             target="_blank"
                             className="mt-3 inline-block text-[var(--yplus-primary,#ead61f)] underline-offset-2"
                           >
-                            {v.ctaLabel ?? "Explore the app →"}
+                            {"Explore →"}
                           </Link>
                         )}
                       </div>

@@ -4,10 +4,10 @@ import Image from "next/image";
 
 type Partner = {
   name: string;
-  src: string; // /images/partners/... (in /public)
-  href?: string; // optional link
+  src: string;
+  href?: string;
   alt?: string;
-  width?: number; // fallback sizing
+  width?: number;
   height?: number;
 };
 
@@ -16,7 +16,9 @@ type Props = {
   subtitle?: string;
   partners: Partner[];
   className?: string;
-  tone?: "light" | "dark"; // default light bg
+  tone?: "light" | "dark";
+  /** seconds for a full loop */
+  durationSec?: number;
 };
 
 export default function PartnersStrip({
@@ -25,14 +27,21 @@ export default function PartnersStrip({
   partners,
   className,
   tone = "light",
+  durationSec = 28, // speed of the loop
 }: Props) {
   const isDark = tone === "dark";
 
+  // Duplicate the list once so the track can scroll seamlessly
+  const loop = [...partners, ...partners];
+
   return (
     <section
-      className={`${isDark ? "bg-black text-white" : "bg-white text-black"} ${
+      className={`mb-8 ${isDark ? "bg-black text-white" : "bg-white text-black"} ${
         className ?? ""
       }`}
+      style={
+        { ["--marquee-duration"]: `${durationSec}s` } as React.CSSProperties
+      }
     >
       <div className="mx-auto max-w-6xl px-6 py-12 md:py-16">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-3">
@@ -41,40 +50,41 @@ export default function PartnersStrip({
               {title}
             </h2>
             {subtitle && (
-              <p
-                className={`mt-2 ${isDark ? "text-white/80" : "text-black/70"}`}
-              >
+              <p className={`mt-2 ${isDark ? "text-white/80" : "text-black/70"}`}>
                 {subtitle}
               </p>
             )}
           </div>
-          {/* thin brand underline on desktop */}
           <div
             className="hidden md:block h-1 w-36 bg-[var(--yplus-primary,#ead61f)] rounded-full"
             aria-hidden="true"
           />
         </div>
+      </div>
 
-        {/* Logos grid */}
-        <ul className="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
-          {partners.map((p) => {
+      {/* Full-width marquee rail */}
+      <div className="logo-marquee">
+        <ul className="logo-track items-center gap-10 md:gap-14 px-6 md:px-8">
+          {loop.map((p, i) => {
             const img = (
               <Image
                 src={p.src}
                 alt={p.alt || `${p.name} logo`}
                 width={p.width ?? 180}
                 height={p.height ?? 90}
-                className="mx-auto h-12 w-auto object-contain opacity-80 grayscale transition-all duration-200 hover:opacity-100 hover:grayscale-0"
+                className="h-12 w-auto object-contain"
+                priority={i < 6} // small LCP boost for first few
               />
             );
             return (
-              <li key={p.name} className="flex items-center justify-center">
+              <li key={`${p.name}-${i}`} className="flex items-center justify-center">
                 {p.href ? (
                   <a
                     href={p.href}
                     target="_blank"
                     rel="noreferrer"
                     aria-label={p.name}
+                    className="inline-flex items-center"
                   >
                     {img}
                   </a>
@@ -86,11 +96,6 @@ export default function PartnersStrip({
           })}
         </ul>
       </div>
-
-      <div
-        className="h-1 w-full bg-[var(--yplus-primary,#ead61f)]"
-        aria-hidden="true"
-      />
     </section>
   );
 }

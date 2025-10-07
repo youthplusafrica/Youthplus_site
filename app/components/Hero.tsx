@@ -37,7 +37,7 @@ export default function Hero({
             sizes="100vw"
             className="object-cover object-center pointer-events-none select-none"
           />
-          <div className="absolute inset-0 bg-black/35" aria-hidden="true" />
+          <div className="absolute inset-0 bg-black/55" aria-hidden="true" />
         </>
       )}
 

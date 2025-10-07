@@ -17,7 +17,7 @@ export default function Home() {
         title="Empowering Africa’s youth to build, create, and lead."
         subtitle="We bridge talent and opportunity across training, creation, growth, and leadership."
         align="left"
-        bgSrc="/images/youth-home.jpg"
+        bgSrc="/images/hero_2.jpg"
       />
       <BackStoryDual />
 
@@ -53,7 +53,17 @@ through innovation, collaboration and social enterprise."
           { name: "Blaze", src: "/images/blaze_logo.png" },
           { name: "British Council", src: "/images/british_council_logo.png" },
 					{ name: "Nestle", src: "/images/nestle_logo.webp"},
-					{ name: "Youth Enterprise Development Fund", src: "/images/youth_enterprise_logo.jpg"}
+					{ name: "Youth Enterprise Development Fund", src: "/images/youth_enterprise_logo.jpg"},
+          { name: "Branch", src: "/images/branch_logo.png" },
+          { name: "FXPesa", src: "/images/fxpesa_logo.svg" },
+          { name: "Top Level Management", src: "/images/TLM_logo.png" },
+          { name: "Old Mutual", src: "/images/Oldmutual_logo.webp"},
+          { name: "Redbull", src: "/images/redbull_logo.svg" },
+          { name: "Sankara", src: "/images/sankara_logo.svg" },
+          { name: "Arvocap", src: "/images/arvocap_logo.webp" },
+          { name: "Sarit Expo", src: "/images/sarit_expo_logo.svg" },
+          { name: "Charge24", src: "/images/charge24_logo.png" },
+          { name: "Vusi Thembekwayo", src: "/images/vusi-logo.png" },
         ]}
       />
 			<FooterMain />

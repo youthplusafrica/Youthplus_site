@@ -48,3 +48,24 @@ a {
 }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+.logo-marquee {
+  overflow: hidden;
+  position: relative;
+}
+
+.logo-track {
+  display: flex;
+  width: max-content;
+  animation: logo-scroll var(--marquee-duration, 30s) linear infinite;
+  will-change: transform;
+}
+
+.logo-marquee:hover .logo-track {
+  animation-play-state: paused; /* pause on hover */
+}
+
+@keyframes logo-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); } /* we duplicate content to make a perfect loop */
+}
