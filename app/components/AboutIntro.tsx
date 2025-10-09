@@ -46,7 +46,7 @@ export default function AboutIntro({
         className={`pointer-events-none hidden md:block absolute inset-y-6 ${
           imageLeft ? "left-1/2 -translate-x-[55%]" : "left-1/2 -translate-x-[45%]"
         } w-24 rotate-6 rounded-2xl opacity-90`}
-        style={{ background: "var(--yplus-primary, #ead61f)" }}
+        style={{ background: "var(--yplus-primary, #d0a328)" }}
         aria-hidden="true"
       />
 
@@ -91,7 +91,7 @@ export default function AboutIntro({
             </h2>
             <span
               className="absolute left-0 -bottom-1 h-2 w-24"
-              style={{ background: "var(--yplus-primary, #ead61f)" }}
+              style={{ background: "var(--yplus-primary, #d0a328)" }}
               aria-hidden="true"
             />
           </div>
@@ -139,7 +139,7 @@ export default function AboutIntro({
       </div>
 
       {/* subtle brand bar at the very bottom */}
-      <div className="h-1 w-full bg-[var(--yplus-primary,#ead61f)]" aria-hidden="true" />
+      <div className="h-1 w-full bg-[var(--yplus-primary,#d0a328)]" aria-hidden="true" />
     </section>
   );
 }

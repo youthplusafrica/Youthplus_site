@@ -35,7 +35,7 @@ export default function PillarsGrid() {
       <div className="mx-auto max-w-6xl px-6 py-12 md:py-16">
         <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">
           HOW{" "}
-          <span className="text-[var(--yplus-primary,#ead61f)]">
+          <span className="text-[var(--yplus-primary,#d0a328)]">
             WE BRIDGE THE GAP
           </span>
         </h2>
@@ -48,9 +48,9 @@ export default function PillarsGrid() {
             >
               <span
                 aria-hidden="true"
-                className="absolute -left-8 -top-8 h-20 w-20 rotate-12 bg-[var(--yplus-primary,#ead61f)] opacity-20 transition-opacity group-hover:opacity-30"
+                className="absolute -left-8 -top-8 h-20 w-20 rotate-12 bg-[var(--yplus-primary,#d0a328)] opacity-20 transition-opacity group-hover:opacity-30"
               />
-              <h3 className="text-xl font-semibold text-[var(--yplus-primary,#ead61f)]">
+              <h3 className="text-xl font-semibold text-[var(--yplus-primary,#d0a328)]">
                 {p.title}
               </h3>
               <p className="mt-2 text-white/85">{p.blurb}</p>

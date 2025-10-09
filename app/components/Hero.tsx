@@ -82,7 +82,7 @@ export default function Hero({
       </div>
 
       <div
-        className="absolute bottom-0 left-0 right-0 h-1 bg-[var(--yplus-primary,#ead61f)]"
+        className="absolute bottom-0 left-0 right-0 h-1 bg-[var(--yplus-primary,#d0a328)]"
         aria-hidden="true"
       />
     </section>

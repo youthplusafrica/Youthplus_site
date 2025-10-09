@@ -30,7 +30,7 @@ export default function TeamMemberCard({ m }: { m: TeamMember }) {
             className="object-cover object-top"
           />
         )}
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-[var(--yplus-primary,#ead61f)]" />
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-[var(--yplus-primary,#d0a328)]" />
       </div>
 
       <div className="p-4">

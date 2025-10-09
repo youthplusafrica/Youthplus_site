@@ -56,7 +56,7 @@ export default function FooterMain() {
     <footer className="bg-black text-white">
       {/* brand bar */}
       <div
-        className="h-1 w-full bg-[var(--yplus-primary,#ead61f)]"
+        className="h-1 w-full bg-[var(--yplus-primary,#d0a328)]"
         aria-hidden="true"
       />
 
@@ -100,7 +100,7 @@ export default function FooterMain() {
                 <li key={n.href}>
                   <Link
                     href={n.href}
-                    className="text-white/85 hover:text-[var(--yplus-primary,#ead61f)] transition"
+                    className="text-white/85 hover:text-[var(--yplus-primary,#d0a328)] transition"
                   >
                     {n.label}
                   </Link>
@@ -119,7 +119,7 @@ export default function FooterMain() {
                 <MailOutlined className="mt-0.5 text-white/70" />
                 <a
                   href="mailto:hello@youthplusafrica.com"
-                  className="hover:text-[var(--yplus-primary,#ead61f)] transition"
+                  className="hover:text-[var(--yplus-primary,#d0a328)] transition"
                 >
                   support@youthplusafrica.com
                 </a>

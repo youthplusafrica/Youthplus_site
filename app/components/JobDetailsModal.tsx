@@ -90,7 +90,7 @@ export default function JobDetailsModal({
             <Button
               type="primary"
               icon={<CheckOutlined />}
-              className="!bg-[var(--yplus-primary,#ead61f)] !text-black hover:!opacity-90"
+              className="!bg-[var(--yplus-primary,#d0a328)] !text-black hover:!opacity-90"
             >
               Apply now
             </Button>

@@ -56,7 +56,7 @@ export default function PartnersStrip({
             )}
           </div>
           <div
-            className="hidden md:block h-1 w-36 bg-[var(--yplus-primary,#ead61f)] rounded-full"
+            className="hidden md:block h-1 w-36 bg-[var(--yplus-primary,#d0a328)] rounded-full"
             aria-hidden="true"
           />
         </div>
