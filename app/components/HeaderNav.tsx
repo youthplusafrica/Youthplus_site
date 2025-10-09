@@ -15,6 +15,7 @@ const NAV = {
   VENTURES: "/ventures",
   ABOUT: "/about",
   PARTNERWITHUS: "/partner-with-us",
+  CALL: "/call-for-speakers",
   CONTACT: "/contact",
   SHOP: "/shop",
 } as const;
@@ -31,6 +32,7 @@ export default function HeaderNav() {
     if (pathname.startsWith(NAV.PARTNERWITHUS)) return NAV.PARTNERWITHUS;
     if (pathname.startsWith(NAV.VENTURES)) return NAV.VENTURES;
     if (pathname.startsWith(NAV.SHOP)) return NAV.SHOP;
+    if (pathname.startsWith(NAV.CALL)) return NAV.CALL;
     return "";
   }, [pathname]);
 
@@ -63,6 +65,7 @@ export default function HeaderNav() {
       key: NAV.PARTNERWITHUS,
       label: <Link href={NAV.PARTNERWITHUS}>Partner with us</Link>,
     },
+    { key: NAV.CALL, label: <Link href={NAV.CALL}>Festival 2026</Link> },
     { key: NAV.CONTACT, label: <Link href={NAV.CONTACT}>Contact</Link> },
     { key: NAV.SHOP, label: <Link href={NAV.SHOP}>Shop</Link> },
   ];
@@ -114,6 +117,11 @@ export default function HeaderNav() {
         <li>
           <Link href={NAV.PARTNERWITHUS} onClick={() => setOpen(false)}>
             Partner with us
+          </Link>
+        </li>
+        <li className="py-2">
+          <Link href={NAV.CALL} onClick={() => setOpen(false)}>
+            Festival 2026
           </Link>
         </li>
         <li className="py-2">

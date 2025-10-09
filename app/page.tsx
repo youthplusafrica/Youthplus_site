@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <div className="flex justify-center items-center h-screen w-screen">
       <div className={`transition-opacity duration-1000 ${fadeOut ? "opacity-0" : "opacity-100"}`}>
-        <Image src={Logo} alt="Boresha Biz Logo" width={500} height={500} />
+        <Image src={Logo} alt="Youth Plus Logo" width={500} height={500} />
       </div>
     </div>
   );

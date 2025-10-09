@@ -8,11 +8,13 @@ import VenturesByPillar from "../components/VenturesByPillar";
 import ImpactTrack from "../components/ImpactTrack";
 import PartnersStrip from "../components/PartnersStrip";
 import FooterMain from "../components/FooterMain";
+import CallForSpeakersModal from "../components/CallForSpeakersModal";
 
 export default function Home() {
   return (
     <div className="min-h-screen w-full">
       <HeaderNav />
+      <CallForSpeakersModal />
       <Hero
         title="Empowering Africa’s youth to build, create, and lead."
         subtitle="We bridge talent and opportunity across training, creation, growth, and leadership."
