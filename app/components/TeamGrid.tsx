@@ -16,7 +16,7 @@ export default function TeamGrid({ team }: { team: TeamMember[] }) {
         </div>
       </div>
       <div
-        className="h-1 w-full bg-[var(--yplus-primary,#ead61f)]"
+        className="h-1 w-full bg-[var(--yplus-primary,#d0a328)]"
         aria-hidden="true"
       />
     </section>

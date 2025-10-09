@@ -41,13 +41,13 @@ export default function CareersSection({ jobs }: { jobs: Job[] }) {
               Join us in empowering Africa’s youth to build, create, and lead.
             </p>
           </div>
-          <div className="hidden md:block h-1 w-36 bg-[var(--yplus-primary,#ead61f)] rounded-full" />
+          <div className="hidden md:block h-1 w-36 bg-[var(--yplus-primary,#d0a328)] rounded-full" />
         </div>
 
         {jobs.length === 0 ? (
           <p className="mt-8 text-black/60">
             No open roles right now. You can still{" "}
-            <a href="mailto:freddy@youthplusafrica.com" className="underline decoration-[var(--yplus-primary,#ead61f)] underline-offset-2">
+            <a href="mailto:freddy@youthplusafrica.com" className="underline decoration-[var(--yplus-primary,#d0a328)] underline-offset-2">
               send us your CV
             </a>
             .
@@ -64,7 +64,7 @@ export default function CareersSection({ jobs }: { jobs: Job[] }) {
                   <button
                     type="button"
                     onClick={() => openModal(j)}
-                    className="w-full text-left rounded-2xl border border-black/10 bg-white p-5 hover:shadow-md transition focus:outline-none focus:ring-2 focus:ring-[var(--yplus-primary,#ead61f)]"
+                    className="w-full text-left rounded-2xl border border-black/10 bg-white p-5 hover:shadow-md transition focus:outline-none focus:ring-2 focus:ring-[var(--yplus-primary,#d0a328)]"
                   >
                     <h3 className="text-lg font-semibold">{j.title}</h3>
                     <div className="mt-1 flex flex-wrap gap-4 text-sm text-black/70">
@@ -74,7 +74,7 @@ export default function CareersSection({ jobs }: { jobs: Job[] }) {
                     </div>
                     {j.blurb && <p className="mt-2 text-black/80 line-clamp-3">{j.blurb}</p>}
                     {href && (
-                      <span className="mt-3 inline-block text-[var(--yplus-primary,#ead61f)] underline-offset-2">
+                      <span className="mt-3 inline-block text-[var(--yplus-primary,#d0a328)] underline-offset-2">
                         View details →
                       </span>
                     )}
@@ -86,7 +86,7 @@ export default function CareersSection({ jobs }: { jobs: Job[] }) {
         )}
       </div>
 
-      <div className="h-1 w-full bg-[var(--yplus-primary,#ead61f)]" aria-hidden="true" />
+      <div className="h-1 w-full bg-[var(--yplus-primary,#d0a328)]" aria-hidden="true" />
 
       {/* Modal */}
       <JobDetailsModal open={open} onClose={() => setOpen(false)} job={selected} />

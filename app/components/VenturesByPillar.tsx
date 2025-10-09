@@ -75,7 +75,7 @@ const VENTURES: Venture[] = [
           opportunity to sharpen their business acumen through effective
           training, practice & mentorship.
         </p>
-        <p className="mt-3 text-sm text-[var(--yplus-primary,#ead61f)] font-semibold">
+        <p className="mt-3 text-sm text-[var(--yplus-primary,#d0a328)] font-semibold">
           Development Phase
         </p>
         <h3 className="mt-3 text-2xl font-semibold">Beta Development</h3>
@@ -138,7 +138,7 @@ const VENTURES: Venture[] = [
           revenue-generating platform from which they can recoup their
           investment through a more efficient pathway to profitability.
         </p>
-        <p className="mt-3 text-sm text-[var(--yplus-primary,#ead61f)] font-semibold">
+        <p className="mt-3 text-sm text-[var(--yplus-primary,#d0a328)] font-semibold">
           Development Phase
         </p>
         <h3 className="mt-3 text-2xl font-semibold">In Development</h3>
@@ -213,7 +213,7 @@ export default function VenturesByPillar({
 
           return (
             <div key={pillar} className="mt-8">
-              <h3 className="text-lg font-semibold mb-3 bg-[var(--yplus-primary,#ead61f)] px-3 py-1 rounded-full">{pillar}</h3>
+              <h3 className="text-lg font-semibold mb-3 bg-[var(--yplus-primary,#d0a328)] px-3 py-1 rounded-full">{pillar}</h3>
 
               <Carousel dots className="yplus-carousel" draggable>
                 {items.map((v) => (
@@ -225,7 +225,7 @@ export default function VenturesByPillar({
                         style={{
                           backgroundImage: v.coverImage
                             ? `url(${v.coverImage})`
-                            : "linear-gradient(135deg,#ead61f,#000)",
+                            : "linear-gradient(135deg,#d0a328,#000)",
                         }}
                         aria-hidden="true"
                       />
@@ -293,7 +293,7 @@ export default function VenturesByPillar({
                                       key={i}
                                       className="rounded-lg bg-white/10 p-3"
                                     >
-                                      <div className="text-base md:text-lg font-extrabold text-[var(--yplus-primary,#ead61f)]">
+                                      <div className="text-base md:text-lg font-extrabold text-[var(--yplus-primary,#d0a328)]">
                                         {imp.value}
                                       </div>
                                       <div className="text-white/85 text-[10px] md:text-sm">
@@ -327,7 +327,7 @@ export default function VenturesByPillar({
                           <Link
                             href={v.externalLink}
                             target="_blank"
-                            className="mt-3 inline-block text-[var(--yplus-primary,#ead61f)] underline-offset-2"
+                            className="mt-3 inline-block text-[var(--yplus-primary,#d0a328)] underline-offset-2"
                           >
                             {"Explore →"}
                           </Link>

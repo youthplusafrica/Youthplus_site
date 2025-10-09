@@ -47,7 +47,7 @@ export default function VenturesPage() {
                   <h2 className="text-2xl font-semibold text-white">{v.name}</h2>
                   {v.blurb && <p className="text-black/70 mt-1 text-white/80">{v.blurb}</p>}
                 </div>
-                <div className="hidden md:block h-1 w-36 bg-[var(--yplus-primary,#ead61f)] rounded-full" />
+                <div className="hidden md:block h-1 w-36 bg-[var(--yplus-primary,#d0a328)] rounded-full" />
               </div>
 
               {recent.length === 0 ? (

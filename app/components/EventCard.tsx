@@ -48,7 +48,7 @@ export default function EventCard({ event }: { event: EventItem }) {
           )}
           <div
             className="absolute bottom-0 left-0 right-0 h-1"
-            style={{ background: "var(--yplus-primary,#ead61f)" }}
+            style={{ background: "var(--yplus-primary,#d0a328)" }}
           />
         </div>
 
@@ -64,7 +64,7 @@ export default function EventCard({ event }: { event: EventItem }) {
 
           <button
             onClick={() => setOpen(true)}
-            className="mt-3 inline-block text-[var(--yplus-primary,#ead61f)] underline-offset-2 hover:opacity-90 cursor-pointer"
+            className="mt-3 inline-block text-[var(--yplus-primary,#d0a328)] underline-offset-2 hover:opacity-90 cursor-pointer"
           >
             View details →
           </button>

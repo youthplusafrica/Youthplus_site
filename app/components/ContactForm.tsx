@@ -80,7 +80,7 @@ export default function ContactForm() {
           htmlType="submit"
           type="primary"
           size="large"
-          className="!bg-[var(--yplus-primary,#ead61f)] !text-black hover:!opacity-90"
+          className="!bg-[var(--yplus-primary,#d0a328)] !text-black hover:!opacity-90"
           loading={submitting}
         >
           Send email

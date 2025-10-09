@@ -26,7 +26,7 @@ export default function ShopPage() {
           </p>
           <div
             className="mx-auto mt-8 h-1 w-40 rounded-full"
-            style={{ background: "var(--yplus-primary,#ead61f)" }}
+            style={{ background: "var(--yplus-primary,#d0a328)" }}
             aria-hidden="true"
           />
         </div>

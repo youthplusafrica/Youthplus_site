@@ -75,7 +75,7 @@ export default function SponsorshipModal({
                 <Button
                   type="primary"
                   icon={<MailOutlined />}
-                  className="!bg-[var(--yplus-primary,#ead61f)] !text-black hover:!opacity-90"
+                  className="!bg-[var(--yplus-primary,#d0a328)] !text-black hover:!opacity-90"
                 >
                   Enquire about {t.name}
                 </Button>

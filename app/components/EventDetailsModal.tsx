@@ -97,7 +97,7 @@ export default function EventDetailsModal({
             <a
               href={link}
               download
-              className="inline-flex items-center gap-1 text-[var(--yplus-primary,#ead61f)] border border-[var(--yplus-primary,#ead61f)] rounded-full px-3 py-1 cursor-pointer"
+              className="inline-flex items-center gap-1 text-[var(--yplus-primary,#d0a328)] border border-[var(--yplus-primary,#d0a328)] rounded-full px-3 py-1 cursor-pointer"
             >
               <ScheduleOutlined /> Book a slot
             </a>

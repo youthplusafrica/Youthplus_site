@@ -67,7 +67,7 @@ export default function ImpactTrack() {
               {/* corner accent */}
               <span
                 className="absolute -right-6 -top-6 h-16 w-16 rotate-12"
-                style={{ background: "var(--yplus-primary,#ead61f)", opacity: 0.18 }}
+                style={{ background: "var(--yplus-primary,#d0a328)", opacity: 0.18 }}
                 aria-hidden="true"
               />
               <div className="flex items-start gap-3">
@@ -86,7 +86,7 @@ export default function ImpactTrack() {
 
       {/* brand bar */}
       <div
-        className="h-1 w-full bg-[var(--yplus-primary,#ead61f)]"
+        className="h-1 w-full bg-[var(--yplus-primary,#d0a328)]"
         aria-hidden="true"
       />
     </section>

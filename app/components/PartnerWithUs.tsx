@@ -173,7 +173,7 @@ export default function PartnerWithUs() {
           </div>
           <div
             className="hidden md:block h-1 w-36 rounded-full"
-            style={{ background: "var(--yplus-primary, #ead61f)" }}
+            style={{ background: "var(--yplus-primary, #d0a328)" }}
           />
         </header>
 
@@ -300,7 +300,7 @@ export default function PartnerWithUs() {
                           htmlType="submit"
                           type="primary"
                           size="large"
-                          className="!bg-[var(--yplus-primary,#ead61f)] !text-black hover:!opacity-90"
+                          className="!bg-[var(--yplus-primary,#d0a328)] !text-black hover:!opacity-90"
                           loading={loading}
                         >
                           Express interest
@@ -429,7 +429,7 @@ export default function PartnerWithUs() {
                           htmlType="submit"
                           type="primary"
                           size="large"
-                          className="!bg-[var(--yplus-primary,#ead61f)] !text-black hover:!opacity-90"
+                          className="!bg-[var(--yplus-primary,#d0a328)] !text-black hover:!opacity-90"
                           loading={loading}
                         >
                           Join as a mentor
@@ -546,7 +546,7 @@ export default function PartnerWithUs() {
                           htmlType="submit"
                           type="primary"
                           size="large"
-                          className="!bg-[var(--yplus-primary,#ead61f)] !text-black hover:!opacity-90"
+                          className="!bg-[var(--yplus-primary,#d0a328)] !text-black hover:!opacity-90"
                           loading={loading}
                         >
                           Join as a volunteer
@@ -591,7 +591,7 @@ export default function PartnerWithUs() {
                   <Button
                     type="primary"
                     size="large"
-                    className="!bg-[var(--yplus-primary,#ead61f)] !text-black hover:!opacity-90"
+                    className="!bg-[var(--yplus-primary,#d0a328)] !text-black hover:!opacity-90"
                   >
                     Sponsor Connect Series
                   </Button>
@@ -601,7 +601,7 @@ export default function PartnerWithUs() {
                   <Button
                     type="primary"
                     size="large"
-                    className="!bg-[var(--yplus-primary,#ead61f)] !text-black hover:!opacity-90"
+                    className="!bg-[var(--yplus-primary,#d0a328)] !text-black hover:!opacity-90"
                   >
                     Sponsor Youth+ Radio
                   </Button>
@@ -615,7 +615,7 @@ export default function PartnerWithUs() {
                   <Button
                     type="primary"
                     size="large"
-                    className="!bg-[var(--yplus-primary,#ead61f)] !text-black hover:!opacity-90"
+                    className="!bg-[var(--yplus-primary,#d0a328)] !text-black hover:!opacity-90"
                   >
                     Sponsor Youth+ Festival
                   </Button>
@@ -628,7 +628,7 @@ export default function PartnerWithUs() {
 
       {/* brand bar */}
       <div
-        className="h-1 w-full bg-[var(--yplus-primary,#ead61f)]"
+        className="h-1 w-full bg-[var(--yplus-primary,#d0a328)]"
         aria-hidden="true"
       />
     </section>
