@@ -26,7 +26,7 @@ export const VENTURES: Venture[] = [
         details:
           "Participants walked away with complete clarity on your money blocks and limiting beliefs, practical tools to rewrite your financial story, a supportive community of like minded individuals, actionable strategies you can implement immediately and the confidence to make better money decisions.",
         galleryUrl: "https://youthplusafrica.pixieset.com/connect-dear-money/",
-        hasFutureEvents: true,
+        hasFutureEvents: false,
         link: "https://forms.gle/An82V5NKZqu76Dwz6",
       },
       {
@@ -54,6 +54,68 @@ export const VENTURES: Venture[] = [
         galleryUrl:
           "https://youthplusafrica.pixieset.com/chartingthecapitalofyou/",
       },
+      {
+        title: "Connect: IP Rights and Legal",
+        date: "2025-10-31",
+        location: "TBD",
+        imageSrc: "/images/coming-soon.png",
+        description: "",
+        details:
+          "A practical session for creators, founders, and innovators to demystify intellectual property. Learn how to protect your work, navigate contracts, avoid common pitfalls, and position your brand for partnerships and growth—guided by legal experts and real case studies.",
+        hasFutureEvents: false,
+      },
+      {
+        title: "The Currency of Exchange",
+        date: "2025-08-30",
+        location: "Strathmore Business School",
+        imageSrc: "/images/currency-exchange.jpeg",
+        description: "Driving business evolution",
+        details:
+          "A powerful day with speakers, entrepreneurs and thought leaders navigating the future of business growth, innovation and sustainable success.",
+        hasFutureEvents: false,
+      },
+      {
+        title: "Connect: Customer Service",
+        date: "2025-11-28",
+        location: "TBD",
+        imageSrc: "/images/coming-soon.png",
+        details: "A fast-paced, hands-on session on building trust at every touchpoint. Learn the systems, habits, and scripts that turn complaints into loyalty, measure satisfaction, and scale a service culture across teams—so customers feel seen, heard, and eager to return.",
+        hasFutureEvents: false,
+      },
+      {
+        title: "Connect: Community and Members Networking",
+        date: "2025-12-05",
+        location: "TBD",
+        imageSrc: "/images/coming-soon.png",
+        details: "a high-energy meetup to spark real connections. Swap ideas, find collaborators, and discover opportunities across the Youth+ ecosystem—guided icebreakers, rapid intros, and open networking that turn “nice to meet you” into “let’s build this.”",
+        hasFutureEvents: false,
+      },
+      {
+        title: "Connect: Accelerating Careers in E-mobility",
+        date: "2025-03-21",
+        location: "N/A",
+        imageSrc: "/images/coming-soon.png",
+        description: "Driving business evolution",
+        details:
+          "E-mobility is accelerating across Africa, with Kenya leading the charge. At our “Careers in E-mobility” session, a leader from Basi Go shared how locally designed and assembled electric buses are reshaping urban transport—and where young people fit in. From engineering and battery tech to fleet management, software, and policy, the opportunities are growing fast. The future is green—are you ready to help build it?",
+        hasFutureEvents: false,
+      },
+      {
+        title: "Connect: Meet Your Taxes Workshop",
+        date: "2025-06-20",
+        location: "Startup Garage",
+        imageSrc: "/images/coming-soon.png",
+        details: "We hosted the KRA Tax Masterclass and filing session in collaboration with Startinev and KRA - a much needed space where entrepreneurs could ask real questions, get clarity and finally breathe when it comes to taxes.",
+        hasFutureEvents: false
+      },
+      {
+        title: "Build your brand bootcamp",
+        date: "2025-09-05",
+        location: "Swiss Lenana Mount Hotel",
+        imageSrc: "/images/coming-soon.png",
+        details: "Build a personal brand that opens doors. Join the Build Your Brand Bootcamp—a 2-day, hands-on experience led by globally recognized experts in branding, public speaking, digital marketing, and leadership.",
+        hasFutureEvents: false
+      }
     ],
   },
 

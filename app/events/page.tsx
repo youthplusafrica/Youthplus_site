@@ -15,7 +15,7 @@ export default function EventsPage() {
         src="/images/events-bg.jpg"   
         alt="Youth+ events background"
         overlay={60}                            
-        className="py-12 md:py-16"
+        className="py-12 md:py-16 h-[80vh]"
       >
         {/* Upcoming */}
         {UPCOMING_EVENTS.length > 0 && (
@@ -55,7 +55,9 @@ export default function EventsPage() {
 
         {/* If both empty */}
         {UPCOMING_EVENTS.length === 0 && PAST_EVENTS.length === 0 && (
-          <p className="text-black/60">No events to show right now.</p>
+          <div className="flex items-center justify-center h-full">
+            <p className="text-white text-4xl font-bold">No events to show right now.</p>
+          </div>
         )}
       {/* </div> */}
       </SectionWithBg>

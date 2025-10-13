@@ -53,7 +53,7 @@ export default function FooterMain() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-black text-white">
+    <footer className="bg-black text-white relative">
       {/* brand bar */}
       <div
         className="h-1 w-full bg-[var(--yplus-primary,#d0a328)]"
