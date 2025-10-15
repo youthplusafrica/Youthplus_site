@@ -148,7 +148,7 @@ export default function HeaderNav() {
             aria-label="Youth+ Africa – Home"
           >
             <Image
-              src="/images/youth-plus-logo.png"
+              src="/images/youth+logo.png"
               alt="Youth+ Africa"
               width={150}
               height={150}
