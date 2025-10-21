@@ -144,7 +144,7 @@ export default function VenturesPage() {
         })}
       </SectionWithBg>
 
-      <VentureDetailsModal
+      <EventDetailsModal
         open={open}
         onClose={() => setOpen(false)}
         event={selected}
