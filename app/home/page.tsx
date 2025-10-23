@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div className="min-h-screen w-full">
       <HeaderNav />
-      <CallForSpeakersModal />
+      {/* <CallForSpeakersModal /> */}
       <Hero
         title="Empowering Africa’s youth to build, create, and lead."
         subtitle="We bridge talent and opportunity across training, creation, growth, and leadership."
