@@ -75,11 +75,11 @@ export const VENTURES: Venture[] = [
         hasFutureEvents: false,
       },
       {
-        title: "Connect: Customer Service",
+        title: "Connect: AI, Tech and Digital skills",
         date: "2025-11-28",
         location: "TBD",
         // imageSrc: "/images/coming-soon.png",
-        details: "A fast-paced, hands-on session on building trust at every touchpoint. Learn the systems, habits, and scripts that turn complaints into loyalty, measure satisfaction, and scale a service culture across teams—so customers feel seen, heard, and eager to return.",
+        details: "Fast-paced meetup bringing innovators, founders, and learners together to explore practical AI, emerging tech trends, and the digital skills you need to thrive—featuring crisp talks, live demos, and hands-on networking.",
         hasFutureEvents: false,
       },
       {

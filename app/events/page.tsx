@@ -15,7 +15,7 @@ export default function EventsPage() {
         src="/images/events-bg.jpg"   
         alt="Youth+ events background"
         overlay={60}                            
-        className="py-12 md:py-16 h-[80vh]"
+        className="py-12 md:py-16"
       >
         {/* Upcoming */}
         {UPCOMING_EVENTS.length > 0 && (
