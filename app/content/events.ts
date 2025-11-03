@@ -1,7 +1,15 @@
 import { EventItem } from "../components/EventCard";
 
 export const UPCOMING_EVENTS: EventItem[] = [
-  
+  {
+    title: "Connect: Own the Stage",
+    date: "Tuesday 04, Nov 2025 and Tuesday 11, Nov 2025, 7PM - 8.30PM",
+    location: "Online",
+    imageSrc: "/images/own_the_stage.png",
+    details: "Build a confident, authentic and expressive voice of the digital age.",
+    hasFutureEvents: true,
+    link: "https://forms.gle/yxSmPmrffUbXc8av5", 
+  }
 ];
 
 export const PAST_EVENTS: EventItem[] = [
