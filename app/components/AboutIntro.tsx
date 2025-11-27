@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 type Highlight = { title?: string; text: string };
 
 type AboutIntroProps = {
@@ -62,11 +64,12 @@ export default function AboutIntro({
               clipPath: imageLeft ? clipLeft : clipRight
             }}
           >
-            {/* If you prefer next/image, swap <img> for <Image fill /> */}
-            <img
+            <Image
               src={imageSrc!}
               alt={imageAlt}
-              className="block w-full h-full object-cover object-center"
+              fill
+              className="object-cover object-center"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
 
             {/* subtle dark gradient at bottom for depth */}

@@ -20,7 +20,7 @@ import {
   BankOutlined,
   SolutionOutlined,
 } from "@ant-design/icons";
-import { useMemo, useState } from "react";
+import { useState } from "react";
 
 type BaseValues = {
   fullName: string;

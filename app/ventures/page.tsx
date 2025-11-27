@@ -7,7 +7,6 @@ import SectionWithBg from "../components/SectionWithBg";
 import { VENTURES } from "../content/ventures";
 import EventDetailsModal from "../components/EventDetailsModal";
 import type { EventItem } from "../components/EventCard";
-import VentureDetailsModal from "../components/VentureDetailsModal";
 
 function parseDate(dateStr?: string) {
   if (!dateStr) return null;

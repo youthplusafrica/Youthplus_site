@@ -5,7 +5,6 @@ import {
   UserOutlined,
   MailOutlined,
   PhoneOutlined,
-  SolutionOutlined,
 } from "@ant-design/icons";
 import { useState, useEffect } from "react";
 
@@ -53,7 +52,7 @@ function LookBack2025FormContent() {
             setAlreadySubmitted(data);
             setShowSuccess(true);
           }
-        } catch (e) {
+        } catch {
           // Invalid JSON, ignore
         }
       }
@@ -118,7 +117,7 @@ function LookBack2025FormContent() {
           description={
             <div>
               <p className="mb-2">
-                We've received your 2025 Look Back submission, <strong>{alreadySubmitted.fullName}</strong>!
+                We&apos;ve received your 2025 Look Back submission, <strong>{alreadySubmitted.fullName}</strong>!
               </p>
               <p className="text-sm text-black/70">
                 Our team will reach out shortly with confirmation of the details for the session. See you soon.

@@ -5,7 +5,6 @@ import {
   EnvironmentOutlined,
   TeamOutlined,
 } from "@ant-design/icons";
-import Link from "next/link";
 import { useState } from "react";
 import JobDetailsModal from "./JobDetailsModal";
 

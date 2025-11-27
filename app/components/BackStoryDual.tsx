@@ -1,7 +1,5 @@
 "use client";
 
-type Source = { label: string };
-
 export default function BackStoryDual() {
   return (
     <section className="w-full bg-black text-white">
