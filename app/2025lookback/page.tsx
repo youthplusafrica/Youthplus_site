@@ -15,8 +15,8 @@ export default function LookBack2025Page() {
           </h1>
           <p className="text-lg text-black/70">
             As we reflect on the year that was and look forward to the year ahead,
-            we'd love to hear about your journey. Share what you hoped to achieve
-            in 2025 and what you're aiming for in 2026.
+            we&apos;d love to hear about your journey. Share what you hoped to achieve
+            in 2025 and what you&apos;re aiming for in 2026.
           </p>
         </div>
         <LookBack2025Form />
