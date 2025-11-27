@@ -127,10 +127,11 @@ ${body.hope2026}`;
     try {
       await transporter.verify();
       console.log("2025 Look Back: SMTP connection verified");
-    } catch (verifyError: any) {
+    } catch (verifyError: unknown) {
+      const err = verifyError as { message?: string; code?: string };
       console.error("2025 Look Back: SMTP verification failed:", {
-        message: verifyError?.message,
-        code: verifyError?.code,
+        message: err?.message,
+        code: err?.code,
       });
       // Continue anyway - some servers don't support verify
     }
@@ -139,18 +140,29 @@ ${body.hope2026}`;
 
     console.log("2025 Look Back: Email sent successfully");
     return NextResponse.json({ success: true });
-  } catch (error: any) {
+  } catch (error: unknown) {
     // Detailed error logging
+    const err = error as {
+      message?: string;
+      code?: string;
+      response?: string;
+      command?: string;
+      responseCode?: number;
+      errno?: number;
+      syscall?: string;
+      hostname?: string;
+      stack?: string;
+    };
     console.error("Error sending 2025 Look Back email:", {
-      message: error?.message,
-      code: error?.code,
-      response: error?.response,
-      command: error?.command,
-      responseCode: error?.responseCode,
-      errno: error?.errno,
-      syscall: error?.syscall,
-      hostname: error?.hostname,
-      stack: error?.stack,
+      message: err?.message,
+      code: err?.code,
+      response: err?.response,
+      command: err?.command,
+      responseCode: err?.responseCode,
+      errno: err?.errno,
+      syscall: err?.syscall,
+      hostname: err?.hostname,
+      stack: err?.stack,
     });
     return NextResponse.json(
       { success: false, error: "Failed to send email. Please try again later." },
