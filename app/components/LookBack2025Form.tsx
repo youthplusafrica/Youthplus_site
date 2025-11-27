@@ -214,7 +214,7 @@ function LookBack2025FormContent() {
           loading={submitting}
           disabled={showSuccess}
         >
-          Share My Goals
+          Reserve My Slot
         </Button>
       </Form>
     </div>
