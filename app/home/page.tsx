@@ -2,13 +2,11 @@ import AboutIntro from "../components/AboutIntro";
 import BackStoryDual from "../components/BackStoryDual";
 import HeaderNav from "../components/HeaderNav";
 import Hero from "../components/Hero";
-import AboutImage from "@/public/images/about.jpg";
 import PillarsGrid from "../components/PillarsGrid";
 import VenturesByPillar from "../components/VenturesByPillar";
 import ImpactTrack from "../components/ImpactTrack";
 import PartnersStrip from "../components/PartnersStrip";
 import FooterMain from "../components/FooterMain";
-import CallForSpeakersModal from "../components/CallForSpeakersModal";
 
 export default function Home() {
   return (

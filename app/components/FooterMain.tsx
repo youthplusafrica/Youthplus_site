@@ -3,7 +3,6 @@
 import Link from "next/link";
 import {
   InstagramOutlined,
-  TwitterOutlined,
   YoutubeFilled,
   LinkedinFilled,
   MailOutlined,

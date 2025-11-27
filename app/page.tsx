@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Button, Card, Space } from "antd";
 import Image from "next/image";
 import Logo from '../public/images/youth+logo.png';
 import { useRouter } from "next/navigation";

@@ -7,7 +7,6 @@ import {
   YoutubeFilled,
   EnvironmentOutlined,
   CalendarOutlined,
-  DownloadOutlined,
   ScheduleOutlined,
 } from "@ant-design/icons";
 import Image from "next/image";

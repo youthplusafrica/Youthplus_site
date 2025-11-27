@@ -1,6 +1,5 @@
 "use client";
 
-import AboutIntro from "../components/AboutIntro";
 import CareersSection from "../components/CareersSection";
 import FooterMain from "../components/FooterMain";
 import HeaderNav from "../components/HeaderNav";
