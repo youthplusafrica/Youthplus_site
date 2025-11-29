@@ -69,3 +69,37 @@ a {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); } /* we duplicate content to make a perfect loop */
 }
+
+/* Animated photo collage for 2025 Look Back page */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+@keyframes float-reverse {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(20px) rotate(-5deg); }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.photo-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.photo-float-reverse {
+  animation: float-reverse 8s ease-in-out infinite;
+}
+
+.photo-fade-in {
+  animation: fade-in-up 0.8s ease-out forwards;
+}

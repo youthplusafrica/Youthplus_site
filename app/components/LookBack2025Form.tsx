@@ -111,12 +111,12 @@ function LookBack2025FormContent() {
 
   if (showSuccess && alreadySubmitted) {
     return (
-      <div className="rounded-2xl border border-black/10 bg-white p-6 md:p-7">
+      <div className="rounded-2xl border border-black/10 bg-white p-6 md:p-7 shadow-[0_4px_16px_rgba(0,0,0,0.08)]">
         <Alert
           message="Thank You!"
           description={
             <div>
-              <p className="mb-2">
+              <p className="mb-2 text-base">
                 We&apos;ve received your 2025 Look Back submission, <strong>{alreadySubmitted.fullName}</strong>!
               </p>
               <p className="text-sm text-black/70">
@@ -133,17 +133,19 @@ function LookBack2025FormContent() {
   }
 
   return (
-    <div className="rounded-2xl border border-black/10 bg-white p-6 md:p-7">
-      <h2 className="text-2xl font-bold">2025 Look Back & 2026 Vision</h2>
-      <p className="text-black/70 mt-1">
-        Share your reflections on 2025 and your aspirations for 2026.
-      </p>
+    <div className="rounded-2xl border border-black/10 bg-white p-6 md:p-7 shadow-[0_4px_16px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-shadow duration-300">
+      <div className="mb-6">
+        <h2 className="text-2xl md:text-3xl font-bold mb-2">2025 Look Back & 2026 Vision</h2>
+        <p className="text-black/70 text-base md:text-lg">
+          Share your reflections on 2025 and your aspirations for 2026.
+        </p>
+      </div>
 
       <Form
         form={form}
         layout="vertical"
         onFinish={onFinish}
-        className="mt-5"
+        className="mt-2"
         disabled={showSuccess}
       >
         <Form.Item
@@ -210,7 +212,7 @@ function LookBack2025FormContent() {
           htmlType="submit"
           type="primary"
           size="large"
-          className="!bg-[var(--yplus-primary,#d0a328)] !text-black hover:!opacity-90"
+          className="!bg-[var(--yplus-primary,#d0a328)] !text-black hover:!opacity-90 hover:!scale-105 transition-transform duration-200 !font-semibold !h-12 !text-base"
           loading={submitting}
           disabled={showSuccess}
         >
