@@ -68,7 +68,7 @@ export default function HeaderNav() {
       label: <Link href={NAV.PARTNERWITHUS}>Partner with us</Link>,
     },
     // { key: NAV.CALL, label: <Link href={NAV.CALL}>Festival 2026</Link> },
-    { key: NAV.LOOKBACK, label: <Link href={NAV.LOOKBACK}>2025 Look Back</Link> },
+    // { key: NAV.LOOKBACK, label: <Link href={NAV.LOOKBACK}>2025 Look Back</Link> },
     { key: NAV.CONTACT, label: <Link href={NAV.CONTACT}>Contact</Link> },
     { key: NAV.SHOP, label: <Link href={NAV.SHOP}>Shop</Link> },
   ];
@@ -127,11 +127,11 @@ export default function HeaderNav() {
             Festival 2026
           </Link>
         </li> */}
-        <li className="py-2">
+        {/* <li className="py-2">
           <Link href={NAV.LOOKBACK} onClick={() => setOpen(false)}>
             2025 Look Back
           </Link>
-        </li>
+        </li> */}
         <li className="py-2">
           <Link href={NAV.CONTACT} onClick={() => setOpen(false)}>
             Contact
