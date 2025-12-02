@@ -144,6 +144,7 @@ ${body.hope2026}`;
       accepted: info.accepted,
       rejected: info.rejected,
       response: info.response,
+      mailOptions: mailOptions,
     });
     return NextResponse.json({ success: true });
   } catch (error: unknown) {
