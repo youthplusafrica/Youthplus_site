@@ -136,9 +136,15 @@ ${body.hope2026}`;
       // Continue anyway - some servers don't support verify
     }
 
-    await transporter.sendMail(mailOptions);
+    const info = await transporter.sendMail(mailOptions);
 
-    console.log("2025 Look Back: Email sent successfully");
+    // console.log("2025 Look Back: Email sent successfully");
+    console.log("2025 Look Back: Email sent successfully", {
+      messageId: info.messageId,
+      accepted: info.accepted,
+      rejected: info.rejected,
+      response: info.response,
+    });
     return NextResponse.json({ success: true });
   } catch (error: unknown) {
     // Detailed error logging
