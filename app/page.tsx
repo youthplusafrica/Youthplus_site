@@ -17,7 +17,10 @@ export default function Home() {
       router.push("/home");
     }, 3000);
 
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer);
+      clearTimeout(redirectTimer);
+    };
   }, [router]);
 
   return (
