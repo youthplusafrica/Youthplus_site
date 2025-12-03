@@ -1,3 +1,6 @@
+// COMMENTED OUT - 2025 Look Back API endpoint is no longer active
+
+/*
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
@@ -177,4 +180,4 @@ ${body.hope2026}`;
     );
   }
 }
-
+*/

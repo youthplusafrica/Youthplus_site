@@ -1,3 +1,6 @@
+// COMMENTED OUT - 2025 Look Back form component is no longer active
+
+/*
 "use client";
 
 import { Form, Input, Select, Button, Alert, App } from "antd";
@@ -203,7 +206,6 @@ function LookBack2025FormContent() {
           <Input.TextArea rows={4} />
         </Form.Item>
 
-        {/* Honeypot (hidden) */}
         <Form.Item name="website" className="hidden">
           <input type="text" tabIndex={-1} autoComplete="off" />
         </Form.Item>
@@ -230,4 +232,4 @@ export default function LookBack2025Form() {
     </App>
   );
 }
-
+*/
