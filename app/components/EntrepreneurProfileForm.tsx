@@ -6,10 +6,8 @@ import {
   MailOutlined,
   PhoneOutlined,
   UploadOutlined,
-  CheckCircleOutlined,
 } from "@ant-design/icons";
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import { uploadToCloudinary } from "../../lib/cloudinary";
 
 const STORAGE_KEY = "youthplus_entrepreneur_profile_submitted";
@@ -623,14 +621,12 @@ function EntrepreneurProfileFormContent() {
                   </span>
                 </label>
                 {pitchDeckUrl && (
-                  <div className="mt-2 flex items-center gap-2 text-sm text-green-600">
-                    <CheckCircleOutlined />
-                    <span>Pitch deck uploaded</span>
+                  <div className="mt-2">
                     <a 
                       href={pitchDeckUrl} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-[var(--yplus-primary,#d0a328)] hover:underline"
+                      className="text-sm text-[var(--yplus-primary,#d0a328)] hover:underline"
                     >
                       View file
                     </a>
@@ -681,28 +677,15 @@ function EntrepreneurProfileFormContent() {
                   </span>
                 </label>
                 {logoOrBrandingUrl && (
-                  <div className="mt-2 flex items-center gap-2">
-                    <div className="flex items-center gap-2 text-sm text-green-600">
-                      <CheckCircleOutlined />
-                      <span>Logo/photo uploaded</span>
-                    </div>
-                    <div className="mt-2">
-                      <Image 
-                        src={logoOrBrandingUrl} 
-                        alt="Uploaded logo/branding" 
-                        width={80}
-                        height={80}
-                        className="object-cover rounded border border-gray-200"
-                      />
-                      <a 
-                        href={logoOrBrandingUrl} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="block mt-1 text-sm text-[var(--yplus-primary,#d0a328)] hover:underline"
-                      >
-                        View full image
-                      </a>
-                    </div>
+                  <div className="mt-2">
+                    <a 
+                      href={logoOrBrandingUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-sm text-[var(--yplus-primary,#d0a328)] hover:underline"
+                    >
+                      View file
+                    </a>
                   </div>
                 )}
               </div>
