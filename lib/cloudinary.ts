@@ -1,7 +1,7 @@
 export type CloudinaryUploadResult = {
   secure_url: string;
   public_id: string;
-  [key: string]: any;
+  [key: string]: unknown;
 };
 
 export async function uploadToCloudinary(file: File): Promise<CloudinaryUploadResult> {

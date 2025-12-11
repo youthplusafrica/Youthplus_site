@@ -9,6 +9,7 @@ import {
   CheckCircleOutlined,
 } from "@ant-design/icons";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { uploadToCloudinary } from "../../lib/cloudinary";
 
 const STORAGE_KEY = "youthplus_entrepreneur_profile_submitted";
@@ -686,10 +687,12 @@ function EntrepreneurProfileFormContent() {
                       <span>Logo/photo uploaded</span>
                     </div>
                     <div className="mt-2">
-                      <img 
+                      <Image 
                         src={logoOrBrandingUrl} 
                         alt="Uploaded logo/branding" 
-                        className="h-20 w-20 object-cover rounded border border-gray-200"
+                        width={80}
+                        height={80}
+                        className="object-cover rounded border border-gray-200"
                       />
                       <a 
                         href={logoOrBrandingUrl} 
