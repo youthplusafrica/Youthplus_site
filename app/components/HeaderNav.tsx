@@ -15,6 +15,7 @@ const NAV = {
   VENTURES: "/ventures",
   ABOUT: "/about",
   PARTNERWITHUS: "/partner-with-us",
+  ENTREPRENEURPROFILE: "/entrepreneur-profile",
   CALL: "/call-for-speakers",
   CONTACT: "/contact",
   SHOP: "/shop",
@@ -33,6 +34,7 @@ export default function HeaderNav() {
     if (pathname.startsWith(NAV.PARTNERWITHUS)) return NAV.PARTNERWITHUS;
     if (pathname.startsWith(NAV.VENTURES)) return NAV.VENTURES;
     if (pathname.startsWith(NAV.SHOP)) return NAV.SHOP;
+    if (pathname.startsWith(NAV.ENTREPRENEURPROFILE)) return NAV.ENTREPRENEURPROFILE;
     // if (pathname.startsWith(NAV.LOOKBACK)) return NAV.LOOKBACK; // COMMENTED OUT
     // if (pathname.startsWith(NAV.CALL)) return NAV.CALL;
     return "";
@@ -66,6 +68,10 @@ export default function HeaderNav() {
     {
       key: NAV.PARTNERWITHUS,
       label: <Link href={NAV.PARTNERWITHUS}>Partner with us</Link>,
+    },
+    {
+      key: NAV.ENTREPRENEURPROFILE,
+      label: <Link href={NAV.ENTREPRENEURPROFILE}>Entrepreneur Profile</Link>,
     },
     // { key: NAV.CALL, label: <Link href={NAV.CALL}>Festival 2026</Link> },
     // { key: NAV.LOOKBACK, label: <Link href={NAV.LOOKBACK}>2025 Look Back</Link> },
@@ -120,6 +126,11 @@ export default function HeaderNav() {
         <li>
           <Link href={NAV.PARTNERWITHUS} onClick={() => setOpen(false)}>
             Partner with us
+          </Link>
+        </li>
+        <li className="py-2">
+          <Link href={NAV.ENTREPRENEURPROFILE} onClick={() => setOpen(false)}>
+            Entrepreneur Profile
           </Link>
         </li>
         {/* <li className="py-2">
