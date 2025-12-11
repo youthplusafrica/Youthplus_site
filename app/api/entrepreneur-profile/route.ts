@@ -161,7 +161,7 @@ export async function POST(request: NextRequest) {
 
     await transporter.sendMail({
       from: process.env.SMTP_FROM || process.env.SMTP_USER,
-      to: "geoffrey@youthplusafrica.com",
+      to: "support@youthplusafrica.com",
       subject,
       text: emailBody,
     });
