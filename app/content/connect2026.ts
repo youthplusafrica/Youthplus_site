@@ -6,7 +6,7 @@ export type ConnectMonth = {
   theme: string;
   partners?: string;
   events: (EventItem & {
-    type: "IG Live" | "Webinar" | "Physical";
+    type: "IG Live" | "Webinar" | "On-site";
   })[];
 };
 
@@ -15,7 +15,7 @@ export const CONNECT_2026: ConnectMonth[] = [
     month: 1,
     monthName: "January",
     theme: "Goal Setting & Vision 2026",
-    partners: "Coach Wangui, Lorraine, Mumbi Kamau",
+    partners: "Coach Wangui, Coach Lorraine (Beyond the Savannah), Coach Mumbi Kamau",
     events: [
       {
         title: "Reset & Realign",
@@ -31,7 +31,7 @@ export const CONNECT_2026: ConnectMonth[] = [
       },
       {
         title: "Visioning Workshop",
-        type: "Physical",
+        type: "On-site",
         date: "2026-01-16",
         location: "TBC",
       },
@@ -41,7 +41,6 @@ export const CONNECT_2026: ConnectMonth[] = [
     month: 2,
     monthName: "February",
     theme: "AI x Creativity x Human Potential",
-    partners: "Women in AI",
     events: [
       {
         title: "AI for Everyday Life",
@@ -57,7 +56,7 @@ export const CONNECT_2026: ConnectMonth[] = [
       },
       {
         title: "Future of Work Festival",
-        type: "Physical",
+        type: "On-site",
         date: "2026-02-27",
         location: "TBC",
       },
@@ -82,7 +81,7 @@ export const CONNECT_2026: ConnectMonth[] = [
       },
       {
         title: "HER Connect 2026 Summit",
-        type: "Physical",
+        type: "On-site",
         date: "2026-03-27",
         location: "TBC",
       },
@@ -107,7 +106,7 @@ export const CONNECT_2026: ConnectMonth[] = [
       },
       {
         title: "Mindset & Balance Retreat",
-        type: "Physical",
+        type: "On-site",
         date: "2026-04-24",
         location: "TBC",
       },
@@ -132,7 +131,7 @@ export const CONNECT_2026: ConnectMonth[] = [
       },
       {
         title: "Eco Futures Expo",
-        type: "Physical",
+        type: "On-site",
         date: "2026-05-29",
         location: "TBC",
       },
@@ -157,7 +156,7 @@ export const CONNECT_2026: ConnectMonth[] = [
       },
       {
         title: "Money Map Summit",
-        type: "Physical",
+        type: "On-site",
         date: "2026-06-26",
         location: "TBC",
       },
@@ -182,7 +181,7 @@ export const CONNECT_2026: ConnectMonth[] = [
       },
       {
         title: "Dear Money Experience",
-        type: "Physical",
+        type: "On-site",
         date: "2026-07-31",
         location: "TBC",
       },
@@ -207,7 +206,7 @@ export const CONNECT_2026: ConnectMonth[] = [
       },
       {
         title: "Tech Future Fair",
-        type: "Physical",
+        type: "On-site",
         date: "2026-08-28",
         location: "TBC",
       },
@@ -232,7 +231,7 @@ export const CONNECT_2026: ConnectMonth[] = [
       },
       {
         title: "CareerConnect Expo",
-        type: "Physical",
+        type: "On-site",
         date: "2026-09-25",
         location: "TBC",
       },
@@ -257,7 +256,7 @@ export const CONNECT_2026: ConnectMonth[] = [
       },
       {
         title: "StartUp Connect",
-        type: "Physical",
+        type: "On-site",
         date: "2026-10-30",
         location: "TBC",
       },
@@ -282,7 +281,7 @@ export const CONNECT_2026: ConnectMonth[] = [
       },
       {
         title: "Wellness Day Experience",
-        type: "Physical",
+        type: "On-site",
         date: "2026-11-27",
         location: "TBC",
       },
@@ -307,7 +306,7 @@ export const CONNECT_2026: ConnectMonth[] = [
       },
       {
         title: "Community Party",
-        type: "Physical",
+        type: "On-site",
         date: "2026-12-25",
         location: "TBC",
       },
