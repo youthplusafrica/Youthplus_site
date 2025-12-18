@@ -47,7 +47,7 @@ export default function Connect2026Series({
               </h3>
               {month.partners && (
                 <p className="mt-1 text-sm text-white/80">
-                  <span className="font-medium">Partners:</span>{" "}
+                  <span className="font-medium">Facilitators:</span>{" "}
                   {month.partners}
                 </p>
               )}
