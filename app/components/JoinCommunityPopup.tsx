@@ -79,7 +79,7 @@ export default function JoinCommunityPopup() {
           {/* Benefits list */}
           <div className="mb-4">
             <p className="text-sm font-semibold text-black mb-2">
-              What you'll receive:
+              What you&apos;ll receive:
             </p>
             <ul className="list-disc list-inside text-sm text-black/70 space-y-1">
               {JOIN_COMMUNITY_CONTENT.benefits.map((benefit, idx) => (

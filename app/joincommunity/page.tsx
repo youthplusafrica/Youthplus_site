@@ -91,7 +91,7 @@ export default function JoinCommunityPage() {
                 }
                 subTitle={
                   <span className="text-white/90">
-                    Thank you for joining! We'll keep you updated on Connect Series events, 
+                    Thank you for joining! We&apos;ll keep you updated on Connect Series events, 
                     opportunities, and community initiatives.
                   </span>
                 }
@@ -112,7 +112,7 @@ export default function JoinCommunityPage() {
               {/* Benefits */}
               <div className="mb-6">
                 <p className="text-white font-semibold mb-3">
-                  What you'll receive:
+                  What you&apos;ll receive:
                 </p>
                 <ul className="list-disc list-inside text-white/90 space-y-2">
                   {JOIN_COMMUNITY_CONTENT.benefits.map((benefit, idx) => (
