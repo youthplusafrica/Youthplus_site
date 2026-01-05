@@ -24,10 +24,15 @@ export const CONNECT_2026: ConnectMonth[] = [
         location: "Online",
       },
       {
-        title: "2026 Blueprint",
+        title: "BLUEPRINT: Turning Vision into an Action Plan",
         type: "Webinar",
         date: "2026-01-13",
         location: "Online",
+        imageSrc: "/images/blueprint.png",
+        description: "Clarify your goals, align your priorities, and build a practical roadmap for 2026.",
+        details: "Join us for a live webinar focused on goal setting and action planning for the year 2026. Learn how to turn your vision into actionable steps and set yourself up for success.\n\nKey Takeaways:\n• How to set clear, achievable goals for 2026\n• Turning big ideas into practical monthly action plans\n• Avoiding common goal-setting mistakes\n• Staying focused and accountable throughout the year\n\nSpeakers:\n• Lorraine Otieno - Career Coach, Founder of Beyond the Savannah\n• Wangui Mungai - Self-Sabotage, Procrastination and Mindset Coach\n• John Wafula - Moderator, Communication Coach, Corporate MC\n\nDate: 13th January 2026\nTime: 7:00 PM - 8:00 PM EAT",
+        link: "https://forms.gle/Yg5k5QjJtX1VFwvp8",
+        hasFutureEvents: true,
       },
       {
         title: "Visioning Workshop",
