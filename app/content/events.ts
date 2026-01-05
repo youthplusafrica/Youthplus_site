@@ -2,6 +2,16 @@ import { EventItem } from "../components/EventCard";
 
 export const UPCOMING_EVENTS: EventItem[] = [
   {
+    title: "BLUEPRINT: Turning Vision into an Action Plan",
+    date: "13th January 2026, 7PM - 8PM",
+    location: "Online",
+    imageSrc: "/images/blueprint.png",
+    description: "Clarify your goals, align your priorities, and build a practical roadmap for 2026.",
+    details: "Join us for a live webinar focused on goal setting and action planning for the year 2026. Learn how to turn your vision into actionable steps and set yourself up for success.\n\nKey Takeaways:\n• How to set clear, achievable goals for 2026\n• Turning big ideas into practical monthly action plans\n• Avoiding common goal-setting mistakes\n• Staying focused and accountable throughout the year\n\nSpeakers:\n• Lorraine Otieno - Career Coach, Founder of Beyond the Savannah\n• Wangui Mungai - Self-Sabotage, Procrastination and Mindset Coach\n• John Wafula - Moderator, Communication Coach, Corporate MC",
+    hasFutureEvents: true,
+    link: "", // TODO: Add registration link
+  },
+  {
     title: "Connect: Own the Stage",
     date: "Tuesday 04, Nov 2025 and Tuesday 11, Nov 2025, 7PM - 8.30PM",
     location: "Online",
