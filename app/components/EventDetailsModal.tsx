@@ -11,6 +11,7 @@ import {
 } from "@ant-design/icons";
 import Image from "next/image";
 import type { EventItem } from "./EventCard";
+import { markBooked, VISIONING_WORKSHOP_EVENT_ID } from "./PhysicalEventPromoModal";
 
 export default function EventDetailsModal({
   open,
@@ -92,15 +93,24 @@ export default function EventDetailsModal({
               className="w-full h-auto object-contain"
             />
           </div>
-          {event.hasFutureEvents && <div className="mt-2 flex items-center justify-between text-sm">
-            <a
-              href={link}
-              download
-              className="inline-flex items-center gap-1 text-[var(--yplus-primary,#d0a328)] border border-[var(--yplus-primary,#d0a328)] rounded-full px-3 py-1 cursor-pointer"
-            >
-              <ScheduleOutlined /> Book a slot
-            </a>
-          </div>}
+          {event.hasFutureEvents && link && (
+            <div className="mt-2 flex items-center justify-between text-sm">
+              <a
+                href={link}
+                target={link.startsWith("http") ? "_blank" : undefined}
+                rel={link.startsWith("http") ? "noopener noreferrer" : undefined}
+                onClick={() => {
+                  // Mark as booked if this is the Visioning Workshop event
+                  if (event.title === "Visioning Workshop") {
+                    markBooked(VISIONING_WORKSHOP_EVENT_ID);
+                  }
+                }}
+                className="inline-flex items-center gap-1 text-[var(--yplus-primary,#d0a328)] border border-[var(--yplus-primary,#d0a328)] rounded-full px-3 py-1 cursor-pointer hover:bg-[var(--yplus-primary,#d0a328)] hover:text-black transition-colors"
+              >
+                <ScheduleOutlined /> Book a slot
+              </a>
+            </div>
+          )}
         </div>
       )}
 
