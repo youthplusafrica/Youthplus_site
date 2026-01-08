@@ -44,7 +44,7 @@ export default function EventsPage() {
             posterImage="/images/visioning_poster.png"
             title="Visioning Workshop"
             description="Join us for an immersive in-person workshop to set your vision for 2026. Transform your aspirations into a clear, actionable vision."
-            bookingUrl="https://forms.gle/Yg5k5QjJtX1VFwvp8"
+            bookingUrl="https://youthplusafrica.hustlesasa.shop/?product=72677"
           />
 
           {upcomingMonths.length > 0 ? (
