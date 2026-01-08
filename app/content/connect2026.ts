@@ -39,6 +39,11 @@ export const CONNECT_2026: ConnectMonth[] = [
         type: "On-site",
         date: "2026-01-16",
         location: "TBC",
+        imageSrc: "/images/visioning_poster.png",
+        description: "Join us for an immersive in-person workshop to set your vision for 2026.",
+        details: "Transform your aspirations into a clear, actionable vision. This physical event brings together goal-setters, visionaries, and changemakers for a hands-on workshop experience.",
+        link: "https://youthplusafrica.hustlesasa.shop/?product=72677", // TODO: Update with actual booking URL
+        hasFutureEvents: true,
       },
     ],
   },

@@ -5,8 +5,10 @@ import HeaderNav from "../components/HeaderNav";
 import SectionWithBg from "../components/SectionWithBg";
 import Connect2026Series from "../components/Connect2026Series";
 import EventCard from "../components/EventCard";
+import EventPromoBanner from "../components/EventPromoBanner";
 import { CONNECT_2026 } from "../content/connect2026";
 import { PAST_EVENTS } from "../content/events";
+import { VISIONING_WORKSHOP_EVENT_ID } from "../components/PhysicalEventPromoModal";
 
 export default function EventsPage() {
   const todayStart = new Date();
@@ -35,20 +37,31 @@ export default function EventsPage() {
         overlay={60}                            
         className="py-12 md:py-16"
       >
-        {upcomingMonths.length > 0 ? (
-          <Connect2026Series
-            months={upcomingMonths}
-            title="Upcoming events – 2026 Youth+ Connect Series"
-            subtitle="Showing only upcoming sessions from the 2026 Youth+ Connect calendar."
+        <div className="mx-auto max-w-6xl px-6">
+          {/* Visioning Workshop Promo Banner */}
+          <EventPromoBanner
+            eventId={VISIONING_WORKSHOP_EVENT_ID}
+            posterImage="/images/visioning_poster.png"
+            title="Visioning Workshop"
+            description="Join us for an immersive in-person workshop to set your vision for 2026. Transform your aspirations into a clear, actionable vision."
+            bookingUrl="https://forms.gle/Yg5k5QjJtX1VFwvp8"
           />
-        ) : (
-          <div className="mt-10 text-center text-white/90">
-            <p className="text-lg font-semibold">No upcoming events right now.</p>
-            <p className="mt-1 text-sm text-white/80">
-              Check back soon for the next Youth+ Connect sessions.
-            </p>
-          </div>
-        )}
+
+          {upcomingMonths.length > 0 ? (
+            <Connect2026Series
+              months={upcomingMonths}
+              title="Upcoming events – 2026 Youth+ Connect Series"
+              subtitle="Showing only upcoming sessions from the 2026 Youth+ Connect calendar."
+            />
+          ) : (
+            <div className="mt-10 text-center text-white/90">
+              <p className="text-lg font-semibold">No upcoming events right now.</p>
+              <p className="mt-1 text-sm text-white/80">
+                Check back soon for the next Youth+ Connect sessions.
+              </p>
+            </div>
+          )}
+        </div>
       </SectionWithBg>
 
       {PAST_EVENTS.length > 0 && (
