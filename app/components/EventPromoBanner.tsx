@@ -11,7 +11,6 @@ import {
 } from "../lib/eventPromo";
 import {
   markBooked,
-  VISIONING_WORKSHOP_EVENT_ID,
 } from "./PhysicalEventPromoModal";
 
 type EventPromoBannerProps = {

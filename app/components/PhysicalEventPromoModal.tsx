@@ -5,7 +5,6 @@ import { Modal, Button } from "antd";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import {
-  getPromoState,
   markBooked as markBookedUtil,
   markDismissed,
   shouldShowPromo,
@@ -30,7 +29,6 @@ export default function PhysicalEventPromoModal({
   eventId,
   posterImage,
   title,
-  description,
   bookingUrl,
   onDismiss,
 }: PhysicalEventPromoModalProps) {
@@ -79,12 +77,6 @@ export default function PhysicalEventPromoModal({
         onCancel={handleCancel}
         footer={null}
         width={720}
-        styles={{ 
-          body: { paddingTop: 8, paddingBottom: 0 }
-        }}
-        maskClosable={true}
-        getContainer={() => document.body}
-        zIndex={1000}
         styles={{
           mask: {
             position: 'fixed',
@@ -94,6 +86,9 @@ export default function PhysicalEventPromoModal({
           },
           body: { paddingTop: 8, paddingBottom: 0 }
         }}
+        maskClosable={true}
+        getContainer={() => document.body}
+        zIndex={1000}
         wrapClassName="event-promo-modal-wrapper"
       >
         <div className="flex flex-col">
