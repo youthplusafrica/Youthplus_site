@@ -113,7 +113,7 @@ export default function PhysicalEventPromoModal({
               onClick={handleBookSlot}
               block
             >
-              Book a slot
+              Grab a Ticket
             </Button>
           </div>
         </div>

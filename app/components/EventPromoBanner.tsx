@@ -97,7 +97,7 @@ export default function EventPromoBanner({
               className="!bg-[var(--yplus-primary,#d0a328)] !text-black hover:!opacity-90"
               onClick={handleBookSlot}
             >
-              Book a slot
+              Grab a Ticket
             </Button>
             <button
               onClick={handleDismiss}
