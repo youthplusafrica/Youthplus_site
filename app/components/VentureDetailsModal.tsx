@@ -95,7 +95,7 @@ export default function VentureDetailsModal({
             href={link}
             className="inline-flex items-center gap-1 text-[var(--yplus-primary,#d0a328)] border border-[var(--yplus-primary,#d0a328)] rounded-full px-3 py-1 cursor-pointer"
           >
-            <ScheduleOutlined /> Book a slot
+            <ScheduleOutlined /> Grab a Ticket
           </a>
         </div>
       )}

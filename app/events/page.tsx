@@ -3,7 +3,7 @@
 import FooterMain from "../components/FooterMain";
 import HeaderNav from "../components/HeaderNav";
 import SectionWithBg from "../components/SectionWithBg";
-import Connect2026Series from "../components/Connect2026Series";
+import MonthRowLayout from "../components/MonthRowLayout";
 import EventCard from "../components/EventCard";
 import EventPromoBanner from "../components/EventPromoBanner";
 import { CONNECT_2026 } from "../content/connect2026";
@@ -11,21 +11,45 @@ import { PAST_EVENTS } from "../content/events";
 import { VISIONING_WORKSHOP_EVENT_ID } from "../components/PhysicalEventPromoModal";
 
 export default function EventsPage() {
-  const todayStart = new Date();
-  todayStart.setHours(0, 0, 0, 0);
+  // Get today's date string in Kenya/EAT timezone (Africa/Nairobi)
+  const getTodayEAT = () => {
+    const now = new Date();
+    return new Intl.DateTimeFormat("en-CA", {
+      timeZone: "Africa/Nairobi",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+    }).format(now);
+  };
+
+  const todayEAT = getTodayEAT();
+
+  // Helper to check if an event is upcoming
+  const isEventUpcoming = (eventDate: string) => {
+    const d = new Date(eventDate);
+    if (isNaN(d.getTime())) return false;
+    
+    const eventDateEAT = new Intl.DateTimeFormat("en-CA", {
+      timeZone: "Africa/Nairobi",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+    }).format(d);
+    
+    return eventDateEAT >= todayEAT;
+  };
 
   const upcomingMonths = CONNECT_2026.map((month) => {
-    const events = month.events
-      .filter((ev) => {
-        const d = new Date(ev.date);
-        return !isNaN(d.getTime()) && d >= todayStart;
-      })
-      .sort(
-        (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
-      );
+    // Keep all events, but sort them
+    const events = [...month.events].sort(
+      (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
+    );
 
-    return { ...month, events };
-  }).filter((m) => m.events.length > 0);
+    // Only include months that have at least one upcoming event
+    const hasUpcomingEvent = events.some((ev) => isEventUpcoming(ev.date));
+
+    return { ...month, events, hasUpcomingEvent };
+  }).filter((m) => m.hasUpcomingEvent);
 
   return (
     <>
@@ -48,7 +72,7 @@ export default function EventsPage() {
           />
 
           {upcomingMonths.length > 0 ? (
-            <Connect2026Series
+            <MonthRowLayout
               months={upcomingMonths}
               title="Upcoming events – 2026 Youth+ Connect Series"
               subtitle="Showing only upcoming sessions from the 2026 Youth+ Connect calendar."
