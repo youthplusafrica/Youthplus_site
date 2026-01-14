@@ -4,6 +4,7 @@ import "./globals.css";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 import AntdProvider from "./components/AntdProvider";
 import AntdReact19Patch from "./components/AntdReact19Patch";
+import { Analytics } from "@vercel/analytics/next";
 
 
 const montserrat = Montserrat({
@@ -35,6 +36,7 @@ export default function RootLayout({
             {children}
           </AntdProvider>
         </AntdRegistry>
+        <Analytics />
       </body>
     </html>
   );
