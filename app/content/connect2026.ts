@@ -37,7 +37,7 @@ export const CONNECT_2026: ConnectMonth[] = [
       {
         title: "Visioning Workshop",
         type: "On-site",
-        date: "2026-01-16",
+        date: "2026-01-23",
         location: "Sarit Expo Centre, Westlands",
         imageSrc: "/images/visioning_poster.png",
         description: "Join us for an immersive in-person workshop to set your vision for 2026.",

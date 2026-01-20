@@ -7,7 +7,7 @@ import VenturesByPillar from "../components/VenturesByPillar";
 import ImpactTrack from "../components/ImpactTrack";
 import PartnersStrip from "../components/PartnersStrip";
 import FooterMain from "../components/FooterMain";
-import JoinCommunityPopup from "../components/JoinCommunityPopup";
+// import JoinCommunityPopup from "../components/JoinCommunityPopup";
 import PhysicalEventPromoModal, {
   VISIONING_WORKSHOP_EVENT_ID,
 } from "../components/PhysicalEventPromoModal";
@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <div className="min-h-screen w-full">
       <HeaderNav />
-      <JoinCommunityPopup />
+      {/* <JoinCommunityPopup /> */}
       <PhysicalEventPromoModal
         eventId={VISIONING_WORKSHOP_EVENT_ID}
         posterImage="/images/visioning_poster.png"
