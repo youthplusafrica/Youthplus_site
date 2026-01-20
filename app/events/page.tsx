@@ -45,11 +45,8 @@ export default function EventsPage() {
       (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
     );
 
-    // Only include months that have at least one upcoming event
-    const hasUpcomingEvent = events.some((ev) => isEventUpcoming(ev.date));
-
-    return { ...month, events, hasUpcomingEvent };
-  }).filter((m) => m.hasUpcomingEvent);
+    return { ...month, events };
+  }).filter((m) => m.events.length > 0); // Show all months with events (upcoming events will be clickable, past events will be disabled)
 
   return (
     <>
