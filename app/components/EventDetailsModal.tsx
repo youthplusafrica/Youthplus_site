@@ -11,7 +11,7 @@ import {
 } from "@ant-design/icons";
 import Image from "next/image";
 import type { EventItem } from "./EventCard";
-import { markBooked, VISIONING_WORKSHOP_EVENT_ID } from "./PhysicalEventPromoModal";
+import { markBooked } from "./PhysicalEventPromoModal";
 
 export default function EventDetailsModal({
   open,
@@ -124,10 +124,7 @@ export default function EventDetailsModal({
                 target={link.startsWith("http") ? "_blank" : undefined}
                 rel={link.startsWith("http") ? "noopener noreferrer" : undefined}
                 onClick={() => {
-                  // Mark as booked if this is the Visioning Workshop event
-                  if (event.title === "Visioning Workshop") {
-                    markBooked(VISIONING_WORKSHOP_EVENT_ID);
-                  }
+                  // Handle booking tracking if needed
                 }}
                 className="inline-flex items-center gap-1 text-[var(--yplus-primary,#d0a328)] border border-[var(--yplus-primary,#d0a328)] rounded-full px-3 py-1 cursor-pointer hover:bg-[var(--yplus-primary,#d0a328)] hover:text-black transition-colors"
               >

@@ -8,22 +8,12 @@ import ImpactTrack from "../components/ImpactTrack";
 import PartnersStrip from "../components/PartnersStrip";
 import FooterMain from "../components/FooterMain";
 // import JoinCommunityPopup from "../components/JoinCommunityPopup";
-import PhysicalEventPromoModal, {
-  VISIONING_WORKSHOP_EVENT_ID,
-} from "../components/PhysicalEventPromoModal";
 
 export default function Home() {
   return (
     <div className="min-h-screen w-full">
       <HeaderNav />
       {/* <JoinCommunityPopup /> */}
-      <PhysicalEventPromoModal
-        eventId={VISIONING_WORKSHOP_EVENT_ID}
-        posterImage="/images/visioning_poster.png"
-        title="Visioning Workshop"
-        description="Join us for an immersive in-person workshop to set your vision for 2026. Transform your aspirations into a clear, actionable vision."
-        bookingUrl="https://youthplusafrica.hustlesasa.shop/?product=72677"
-      />
       {/* <CallForSpeakersModal /> */}
       <Hero
         title="Empowering Africa’s youth to build, create, and lead."

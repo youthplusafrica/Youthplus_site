@@ -5,10 +5,8 @@ import HeaderNav from "../components/HeaderNav";
 import SectionWithBg from "../components/SectionWithBg";
 import MonthRowLayout from "../components/MonthRowLayout";
 import EventCard from "../components/EventCard";
-import EventPromoBanner from "../components/EventPromoBanner";
 import { CONNECT_2026 } from "../content/connect2026";
 import { PAST_EVENTS } from "../content/events";
-import { VISIONING_WORKSHOP_EVENT_ID } from "../components/PhysicalEventPromoModal";
 
 export default function EventsPage() {
   // Get today's date string in Kenya/EAT timezone (Africa/Nairobi)
@@ -59,15 +57,6 @@ export default function EventsPage() {
         className="py-12 md:py-16"
       >
         <div className="mx-auto max-w-6xl px-6">
-          {/* Visioning Workshop Promo Banner */}
-          <EventPromoBanner
-            eventId={VISIONING_WORKSHOP_EVENT_ID}
-            posterImage="/images/visioning_poster.png"
-            title="Visioning Workshop"
-            description="Join us for an immersive in-person workshop to set your vision for 2026. Transform your aspirations into a clear, actionable vision."
-            bookingUrl="https://youthplusafrica.hustlesasa.shop/?product=72677"
-          />
-
           {upcomingMonths.length > 0 ? (
             <MonthRowLayout
               months={upcomingMonths}
