@@ -110,7 +110,7 @@ export default function MonthRowLayout({
                   const event = getEventByType(month, type);
                   const hasEvent = !!event;
                   const isPast = hasEvent && event ? isEventPast(event.date) : false;
-                  const isClickable = hasEvent && !isPast;
+                  const isClickable = hasEvent; // All events are now clickable, including past ones
 
                   return (
                     <div
@@ -119,7 +119,7 @@ export default function MonthRowLayout({
                         !hasEvent
                           ? "border-white/10 bg-white/3 opacity-60"
                           : isPast
-                          ? "border-white/10 bg-white/3 opacity-50 cursor-not-allowed"
+                          ? "border-white/20 bg-white/5 opacity-70 cursor-pointer hover:border-[var(--yplus-primary,#d0a328)] hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-[var(--yplus-primary,#d0a328)] focus:ring-offset-2 focus:ring-offset-black/30"
                           : "border-white/20 bg-white/5 cursor-pointer hover:border-[var(--yplus-primary,#d0a328)] hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-[var(--yplus-primary,#d0a328)] focus:ring-offset-2 focus:ring-offset-black/30"
                       }`}
                       onClick={() => {
