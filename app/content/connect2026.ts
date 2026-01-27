@@ -57,6 +57,10 @@ export const CONNECT_2026: ConnectMonth[] = [
         type: "IG Live",
         date: "2026-02-03",
         location: "Online",
+        imageSrc: "/images/ai_for_everyday_life.jpg",
+        description: "What if the difference between burnout and balance—or slow growth and smart growth—was how well you use AI in your daily work and business decisions? Tune in to our Instagram Live with Moses Were as we break down simple, practical ways to integrate AI into your workflow for better productivity and growth.",
+        details: "Join us for an Instagram Live session with Moses Were, Digital Marketing Strategist & Trainer and Founder of Strive Creatives, as we explore practical ways to integrate AI into your daily work and business decisions.\n\nDate: February 3, 2026, Tuesday\nTime: 7:00 PM - 8:00 PM EAT\nPlatform: Instagram Live\nSpeaker: Moses Were (@moseswere_digital)\n\nLearn how to use AI tools effectively to improve productivity, make smarter business decisions, and achieve better work-life balance.",
+        hasFutureEvents: true,
       },
       {
         title: "Women in AI Session",

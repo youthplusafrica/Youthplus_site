@@ -28,6 +28,30 @@ export default function EventDetailsModal({
   const posterAlt = `${event.title} poster`; // simple alt fallback
   const link = event.link;
 
+  // Check if event is past
+  const isEventPast = () => {
+    const eventDate = new Date(event.date);
+    if (isNaN(eventDate.getTime())) return false;
+    
+    const todayEAT = new Intl.DateTimeFormat("en-CA", {
+      timeZone: "Africa/Nairobi",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+    }).format(new Date());
+    
+    const eventDateEAT = new Intl.DateTimeFormat("en-CA", {
+      timeZone: "Africa/Nairobi",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+    }).format(eventDate);
+    
+    return eventDateEAT < todayEAT;
+  };
+
+  const isPast = isEventPast();
+
   return (
     <Modal
       open={open}
@@ -93,7 +117,7 @@ export default function EventDetailsModal({
               className="w-full h-auto object-contain"
             />
           </div>
-          {event.hasFutureEvents && link && (
+          {event.hasFutureEvents && link && !isPast && (
             <div className="mt-2 flex items-center justify-between text-sm">
               <a
                 href={link}
