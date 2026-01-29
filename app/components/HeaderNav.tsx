@@ -159,7 +159,7 @@ export default function HeaderNav() {
 
   return (
     <header className="sticky top-0 z-50 bg-white backdrop-blur border-b border-black/10">
-      <div className="container w-full px-6">
+      <div className="w-full px-6">
         <div className="flex items-center justify-between gap-4 py-4">
           <Link
             href="/home"

@@ -6,9 +6,11 @@ import EventDetailsModal from "./EventDetailsModal";
 
 export type EventItem = {
   title: string;
-  date: string; // ISO string e.g. "2025-11-12"
+  date: string; // ISO string e.g. "2025-11-12" (primary date, for backward compatibility)
+  dates?: string[]; // Array of ISO date strings for events with multiple dates
   location: string;
-  imageSrc?: string; // /images/events/...
+  imageSrc?: string; // /images/events/... (single image, for backward compatibility)
+  imageSrcs?: string[]; // Array of images for carousel/switcher
   description?: string;
   link?: string; // external or internal URL
   details?: string;

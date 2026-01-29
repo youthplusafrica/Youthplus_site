@@ -151,14 +151,23 @@ export default function MonthRowLayout({
                           </p>
                           <p className="mt-1 text-[10px] md:text-xs text-white/80">
                             {(() => {
-                              const d = new Date(event.date);
-                              return isNaN(d.getTime())
-                                ? event.date
-                                : new Intl.DateTimeFormat(undefined, {
-                                    year: "numeric",
-                                    month: "short",
-                                    day: "2-digit",
-                                  }).format(d);
+                              // Support multiple dates (dates array) or single date (date)
+                              const datesToFormat = event.dates && event.dates.length > 0
+                                ? event.dates
+                                : [event.date];
+                              
+                              return datesToFormat
+                                .map((dateStr) => {
+                                  const d = new Date(dateStr);
+                                  return isNaN(d.getTime())
+                                    ? dateStr
+                                    : new Intl.DateTimeFormat(undefined, {
+                                        year: "numeric",
+                                        month: "short",
+                                        day: "2-digit",
+                                      }).format(d);
+                                })
+                                .join(" & ");
                             })()}
                           </p>
                         </>
