@@ -76,6 +76,7 @@ export const CONNECT_2026: ConnectMonth[] = [
         description: "A 2-Part Webinar Series exploring the state of women in AI, from participation and power to pathways for influence and leadership.",
         details: "Join us for a comprehensive 2-part webinar series examining the current state of women in AI.\n\nPart I | Feb 10, 7:00 PM (EAT) - Where do women stand in the AI ecosystem today? From participation and power, to visibility, access, and decision-making — this session takes an honest look at the current state of women in AI.\n\nPart 2 | Feb 17, 7:00 PM (EAT) - How women can move from awareness to influence. Pathways to agency, governance, and leadership in AI. Creating real, tangible value in the AI ecosystem.\n\nSpeaker: Shi Kang'ethe, Head of AI | www.esotericstrats.com",
         hasFutureEvents: true,
+        link: "https://forms.gle/XPs1Dcas1W4d5GWk7"
       },
       {
         title: "Future of Work Festival",
