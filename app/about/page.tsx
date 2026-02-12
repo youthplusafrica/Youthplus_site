@@ -12,7 +12,7 @@ export default function AboutPage() {
     <>
       <HeaderNav />
 
-      <TeamGrid team={TEAM} />
+      {/* <TeamGrid team={TEAM} /> */}
 
       <CareersSection jobs={JOBS} />
 
