@@ -79,10 +79,15 @@ export const CONNECT_2026: ConnectMonth[] = [
         link: "https://forms.gle/XPs1Dcas1W4d5GWk7"
       },
       {
-        title: "Future of Work Festival",
+        title: "The Future of Work",
         type: "On-site",
         date: "2026-02-27",
-        location: "TBC",
+        location: "Sarit Expo Centre, Westlands",
+        imageSrc: "/images/future_of_work.jpg",
+        description: "AI. Skills. Careers. Power. A high-impact, in-person experience for professionals navigating what's next.",
+        details: "The Future of Work Is Here — Are You Ready For It?\n\nA high-impact, in-person experience for professionals navigating what's next. Join industry leaders and innovators as we explore the intersection of AI, creativity, and human potential.\n\nSpeakers:\n• Shi Kang'ethe — Founder, Toxic Work Spaces\n• Mosses Were — Founder, Strive Creatives\n• Mitchelle Jangara — AI-Powered Content Strategist\n• Miringa — Agentic AI Expert & Educator\n• Imelda Mugambi — Moderator\n\nDate: 27th February 2026\nTime: 2:00 PM - 7:00 PM\nVenue: Sarit Expo Centre, Westlands, Nairobi\n\nTicket Pricing:\n• Early Bird: KES 800\n• Advance: KES 1,000\n• Gate: KES 1,300\n• Exhibitors: KES 1,500\n\nTickets available on HustleSasa.",
+        link: "https://youthplus.hustlesasa.shop/products/698aebe011d0fa359931b36a",
+        hasFutureEvents: true,
       },
     ],
   },
