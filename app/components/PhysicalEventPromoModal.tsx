@@ -10,8 +10,8 @@ import {
   markDismissed,
 } from "../lib/eventPromo";
 
-// Event ID constant - must match the event being promoted
-export const VISIONING_WORKSHOP_EVENT_ID = "visioning-workshop-2026-01-16";
+// Re-export event ID for convenience (from shared config)
+export { FUTURE_OF_WORK_EVENT_ID } from "../content/eventPromoConfig";
 
 // Re-export markBooked for use in EventDetailsModal and EventPromoBanner
 export const markBooked = markBookedUtil;
