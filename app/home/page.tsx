@@ -8,8 +8,6 @@ import ImpactTrack from "../components/ImpactTrack";
 import PartnersStrip from "../components/PartnersStrip";
 import FooterMain from "../components/FooterMain";
 // import JoinCommunityPopup from "../components/JoinCommunityPopup";
-import PhysicalEventPromoModal from "../components/PhysicalEventPromoModal";
-import { FUTURE_OF_WORK_PROMO } from "../content/eventPromoConfig";
 
 export default function Home() {
   return (
@@ -17,13 +15,6 @@ export default function Home() {
       <HeaderNav />
       {/* <JoinCommunityPopup /> */}
       {/* <CallForSpeakersModal /> */}
-      <PhysicalEventPromoModal
-        eventId={FUTURE_OF_WORK_PROMO.eventId}
-        posterImage={FUTURE_OF_WORK_PROMO.posterImage}
-        title={FUTURE_OF_WORK_PROMO.title}
-        description={FUTURE_OF_WORK_PROMO.description}
-        bookingUrl={FUTURE_OF_WORK_PROMO.bookingUrl}
-      />
       <Hero
         title="Empowering Africa’s youth to build, create, and lead."
         subtitle="We bridge talent and opportunity across training, creation, growth, and leadership."

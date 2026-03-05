@@ -5,9 +5,6 @@ import HeaderNav from "../components/HeaderNav";
 import SectionWithBg from "../components/SectionWithBg";
 import MonthRowLayout from "../components/MonthRowLayout";
 import EventCard from "../components/EventCard";
-import PhysicalEventPromoModal from "../components/PhysicalEventPromoModal";
-import EventPromoBanner from "../components/EventPromoBanner";
-import { FUTURE_OF_WORK_PROMO } from "../content/eventPromoConfig";
 import { CONNECT_2026 } from "../content/connect2026";
 import { PAST_EVENTS } from "../content/events";
 
@@ -53,15 +50,6 @@ export default function EventsPage() {
     <>
       <HeaderNav />
 
-      {/* Future of Work popup */}
-      <PhysicalEventPromoModal
-        eventId={FUTURE_OF_WORK_PROMO.eventId}
-        posterImage={FUTURE_OF_WORK_PROMO.posterImage}
-        title={FUTURE_OF_WORK_PROMO.title}
-        description={FUTURE_OF_WORK_PROMO.description}
-        bookingUrl={FUTURE_OF_WORK_PROMO.bookingUrl}
-      />
-
       {/* <div className="mx-auto max-w-6xl px-6 py-12 md:py-16"> */}
       <SectionWithBg
         src="/images/events-bg.jpg"   
@@ -70,15 +58,6 @@ export default function EventsPage() {
         className="py-12 md:py-16"
       >
         <div className="mx-auto max-w-6xl px-6">
-          {/* Future of Work inline banner */}
-          <EventPromoBanner
-            eventId={FUTURE_OF_WORK_PROMO.eventId}
-            posterImage={FUTURE_OF_WORK_PROMO.posterImage}
-            title={FUTURE_OF_WORK_PROMO.title}
-            description="AI. Skills. Careers. Power. A high-impact, in-person experience — 27th Feb, 2-7 PM at Sarit Expo Centre."
-            bookingUrl={FUTURE_OF_WORK_PROMO.bookingUrl}
-          />
-
           {upcomingMonths.length > 0 ? (
             <MonthRowLayout
               months={upcomingMonths}
