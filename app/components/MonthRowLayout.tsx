@@ -39,19 +39,28 @@ export default function MonthRowLayout({
 
   const todayEAT = getTodayEAT();
 
-  // Check if an event is past
-  const isEventPast = (eventDate: string) => {
-    const d = new Date(eventDate);
-    if (isNaN(d.getTime())) return false;
-    
-    const eventDateEAT = new Intl.DateTimeFormat("en-CA", {
-      timeZone: "Africa/Nairobi",
-      year: "numeric",
-      month: "2-digit",
-      day: "2-digit",
-    }).format(d);
-    
-    return eventDateEAT < todayEAT;
+  // Check if an event is past. For multi-date events, use the latest valid date.
+  const isEventPast = (event: EventItem) => {
+    const rawDates =
+      event.dates && event.dates.length > 0 ? event.dates : [event.date];
+
+    const eventDatesEAT = rawDates
+      .map((dateStr) => new Date(dateStr))
+      .filter((d) => !isNaN(d.getTime()))
+      .map((d) =>
+        new Intl.DateTimeFormat("en-CA", {
+          timeZone: "Africa/Nairobi",
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit",
+        }).format(d)
+      )
+      .sort();
+
+    if (!eventDatesEAT.length) return false;
+
+    const latestEventDateEAT = eventDatesEAT[eventDatesEAT.length - 1];
+    return latestEventDateEAT < todayEAT;
   };
 
   const getEventByType = (
@@ -109,7 +118,7 @@ export default function MonthRowLayout({
                 {eventTypes.map((type) => {
                   const event = getEventByType(month, type);
                   const hasEvent = !!event;
-                  const isPast = hasEvent && event ? isEventPast(event.date) : false;
+                  const isPast = hasEvent && event ? isEventPast(event) : false;
                   const isClickable = hasEvent; // All events are now clickable, including past ones
 
                   return (
