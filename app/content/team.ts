@@ -16,11 +16,11 @@ export const TEAM: TeamMember[] = [
     email: "sam@youthplusafrica.com"
   },
   {
-    name: "Jeff Geoffrey",
-    role: "Project Manager",
-    headshot: "/images/jeff_2.jpg",
-    linkedin: "https://www.linkedin.com/in/jeff-geoffry-mumbo-91259311b",
-    email: "geoffrey@youthplusafrica.com"
+    name: "Miriam Njeri",
+    role: "Partnerships Lead",
+    headshot: "/images/miriam.jpeg",
+    linkedin: "https://www.linkedin.com/in/miriam-njeri-170495313/",
+    email: "miriam@youthplusafrica.com"
   },
   {
     name: "J. I. Mideva Muhandale",
@@ -29,10 +29,10 @@ export const TEAM: TeamMember[] = [
     linkedin: "https://www.linkedin.com/in/mideva-muhandale-058320178/",
   },
   {
-    name: "Miriam Njeri",
-    role: "Partnerships Lead",
-    headshot: "/images/miriam.jpeg",
-    linkedin: "https://www.linkedin.com/in/miriam-njeri-170495313/",
-    email: "miriam@youthplusafrica.com"
+    name: "Jeff Geoffrey",
+    role: "Project Manager",
+    headshot: "/images/jeff_2.jpg",
+    linkedin: "https://www.linkedin.com/in/jeff-geoffry-mumbo-91259311b",
+    email: "geoffrey@youthplusafrica.com"
   }
 ];
