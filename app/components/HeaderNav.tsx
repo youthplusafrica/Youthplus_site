@@ -36,7 +36,7 @@ export default function HeaderNav() {
     if (pathname.startsWith(NAV.VENTURES)) return NAV.VENTURES;
     if (pathname.startsWith(NAV.SHOP)) return NAV.SHOP;
     // if (pathname.startsWith(NAV.LOOKBACK)) return NAV.LOOKBACK; // COMMENTED OUT
-    // if (pathname.startsWith(NAV.CALL)) return NAV.CALL;
+    if (pathname.startsWith(NAV.CALL)) return NAV.CALL;
     return "";
   }, [pathname]);
 
@@ -73,7 +73,7 @@ export default function HeaderNav() {
       key: NAV.WELEADBASELINE,
       label: <Link href={NAV.WELEADBASELINE}>We Lead Baseline Survey</Link>,
     },
-    // { key: NAV.CALL, label: <Link href={NAV.CALL}>Festival 2026</Link> },
+    { key: NAV.CALL, label: <Link href={NAV.CALL}>Festival 2026</Link> },
     // { key: NAV.LOOKBACK, label: <Link href={NAV.LOOKBACK}>2025 Look Back</Link> },
     { key: NAV.CONTACT, label: <Link href={NAV.CONTACT}>Contact</Link> },
     { key: NAV.SHOP, label: <Link href={NAV.SHOP}>Shop</Link> },
@@ -133,11 +133,11 @@ export default function HeaderNav() {
             We Lead Baseline Survey
           </Link>
         </li>
-        {/* <li className="py-2">
+        <li className="py-2">
           <Link href={NAV.CALL} onClick={() => setOpen(false)}>
             Festival 2026
           </Link>
-        </li> */}
+        </li>
         {/* <li className="py-2">
           <Link href={NAV.LOOKBACK} onClick={() => setOpen(false)}>
             2025 Look Back
