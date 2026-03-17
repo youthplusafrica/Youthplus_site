@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import { sendEmail } from "../../../lib/email/send-email";
 
 type FormData = {
   fullName: string;
@@ -41,40 +41,28 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Configure nodemailer transporter
-    // Using environment variables for email configuration
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST || "smtp.gmail.com",
-      port: parseInt(process.env.SMTP_PORT || "587"),
-      secure: process.env.SMTP_SECURE === "true", // true for 465, false for other ports
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-      },
-    });
-
-    // If no SMTP credentials are configured, fall back to a simple response
-    // In production, you should configure SMTP credentials
-    if (!process.env.SMTP_USER || !process.env.SMTP_PASS) {
-      console.warn("SMTP credentials not configured. Email would be sent to:", "joan@youthplusafrica.com");
+    if (!process.env.RESEND_API_KEY) {
+      console.warn("Resend API key not configured. Email would be sent to:", "joan@youthplusafrica.com");
       console.log("Join Community form submission data:", JSON.stringify(data, null, 2));
-      
-      // Return success but log that email wasn't actually sent
+
       return NextResponse.json({
         success: true,
-        message: "Form submitted successfully (SMTP not configured - check server logs)",
+        message: "Form submitted successfully (email service not configured - check server logs)",
       });
     }
 
     const emailBody = formatEmailBody(data);
     const subject = `New Join Community Submission - ${data.fullName}`;
 
-    await transporter.sendMail({
-      from: process.env.SMTP_FROM || process.env.SMTP_USER,
+    const emailResult = await sendEmail({
       to: "joan@youthplusafrica.com",
       subject,
       text: emailBody,
+      replyTo: data.email,
     });
+    if (!emailResult.success) {
+      throw new Error(emailResult.error || "Failed to send email");
+    }
 
     return NextResponse.json({ success: true, message: "Form submitted successfully" });
   } catch (error) {

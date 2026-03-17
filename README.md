@@ -16,6 +16,22 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Email Configuration (Resend)
+
+Server-side form emails use Resend via a shared utility (`lib/email/send-email.ts`).
+Set these environment variables before testing outbound form notifications:
+
+```bash
+RESEND_API_KEY=your_resend_api_key
+EMAIL_FROM="Youth Plus Africa <noreply@yourdomain.com>"
+EMAIL_REPLY_TO=support@youthplusafrica.com
+NEXT_PUBLIC_GIVE_TO_GAIN_WEBINAR_LINK=https://...
+```
+
+Notes:
+- `RESEND_API_KEY`, `EMAIL_FROM`, and `EMAIL_REPLY_TO` are server-only usage.
+- The Give to Gain webinar confirmation email reads the webinar URL from `NEXT_PUBLIC_GIVE_TO_GAIN_WEBINAR_LINK`.
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.

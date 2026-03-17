@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import { sendEmail } from "../../../lib/email/send-email";
 
 type SurveyData = {
   ageGroup: string;
@@ -193,34 +193,26 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ success: false, error: validationError }, { status: 400 });
     }
 
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST || "smtp.gmail.com",
-      port: parseInt(process.env.SMTP_PORT || "587"),
-      secure: process.env.SMTP_SECURE === "true",
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-      },
-    });
-
-    if (!process.env.SMTP_USER || !process.env.SMTP_PASS) {
-      console.warn("SMTP credentials not configured. Email would be sent to:", "tele@youthplusafrica.com");
+    if (!process.env.RESEND_API_KEY) {
+      console.warn("Resend API key not configured. Email would be sent to:", "tele@youthplusafrica.com");
       console.log("We Lead baseline survey submission data:", JSON.stringify(data, null, 2));
       return NextResponse.json({
         success: true,
-        message: "Survey submitted successfully (SMTP not configured - check server logs)",
+        message: "Survey submitted successfully (email service not configured - check server logs)",
       });
     }
 
     const emailBody = formatEmailBody(data);
     const subject = `New We Lead Baseline Survey Submission - ${data.county}`;
 
-    await transporter.sendMail({
-      from: process.env.SMTP_FROM || process.env.SMTP_USER,
+    const emailResult = await sendEmail({
       to: "tele@youthplusafrica.com",
       subject,
       text: emailBody,
     });
+    if (!emailResult.success) {
+      throw new Error(emailResult.error || "Failed to send email");
+    }
 
     return NextResponse.json({ success: true, message: "Survey submitted successfully" });
   } catch (error) {
