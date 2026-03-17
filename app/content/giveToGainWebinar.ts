@@ -18,7 +18,7 @@ export const GIVE_TO_GAIN_WEBINAR = {
   time: "7:00 PM - 8:30 PM EAT",
   format: "Virtual",
   webinarLink,
-  notificationEmail: "sam@youthplusafrica.com",
+  notificationEmail: "support@youthplusafrica.com",
   speakers: [
     {
       name: "Stephanie Mambo",
@@ -59,6 +59,14 @@ export const GIVE_TO_GAIN_WEBINAR = {
         "Entrepreneur and builder focused on translating vision into revenue, resilience, and business scale.",
       imagePath: "/images/gloria_kisilu.png",
       spotlight: "Turning purpose into practical, sustainable economic outcomes.",
+    },
+    {
+      name: "Mary Adhiambo",
+      role: "Leadership & Economic Empowerment Speaker",
+      bioExcerpt:
+        "Advocates for purpose-driven leadership and practical growth pathways for women navigating career and business transitions.",
+      imagePath: "/images/mary_adhiambo.png",
+      spotlight: "Centering practical growth, voice, and sustainable success for women leaders.",
     },
   ] satisfies GiveToGainSpeaker[],
 } as const;
