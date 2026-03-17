@@ -208,7 +208,7 @@ function formatConfirmationEmailHtml(data: WebinarRegistrationData, logoUrl: str
   const linkBlock = webinarLink
     ? `<div style="margin:18px 0 12px;">
          <a href="${escapeHtml(webinarLink)}" target="_blank" rel="noreferrer" style="display:inline-block;background:#d0a328;color:#111827;text-decoration:none;font-weight:600;padding:12px 18px;border-radius:10px;font-size:14px;">
-           Add to Calendar
+           Join Webinar
          </a>
        </div>
        <p style="margin:0 0 14px;color:#4b5563;font-size:12px;line-height:1.5;">If the button does not open, copy this link:<br>${escapeHtml(webinarLink)}</p>`
