@@ -109,10 +109,24 @@ export const CONNECT_2026: ConnectMonth[] = [
         location: "Online",
       },
       {
-        title: "HER Connect 2026 Summit",
-        type: "On-site",
-        date: "2026-03-27",
-        location: "TBC",
+        title: "Give to Gain Webinar Series",
+        type: "Webinar",
+        date: "2026-03-24",
+        location: "Online",
+        imageSrc: "/images/steph_mambo.png",
+        imageSrcs: [
+          "/images/steph_mambo.png",
+          "/images/quinta_onditi.png",
+          "/images/mumbua_muithya.png",
+          "/images/josephine_mbeo.png",
+          "/images/gloria_kisilu.png",
+        ],
+        description:
+          "Can Women Have It All? A conversation on leadership, purpose, and building economic power without losing yourself.",
+        details:
+          "Give to Gain Webinar Series\nTheme: Leadership & Economic Empowerment\nQuestion: Can Women Have It All?\n\nA conversation on leadership, purpose, and building economic power without losing yourself.\n\nDate: March 24, 2026\nTime: 7:30 PM - 8:30 PM EAT\nFormat: Virtual\n\nFeatured Speakers:\n• Stephanie Mambo — Strategy and Risk Advisor, Sofala Partners\n• Quinta Onditi — Strategic Programs & Inclusive Finance Leader\n• Mumbua Muithya — Digital Media Strategist, Moderator\n• Josephine Mbeo — Strategic Communications Leader & Corporate Affairs Expert\n• Gloria Kisilu — Founder & CEO, The Shaba",
+        link: "/give-to-gain-webinar",
+        hasFutureEvents: true,
       },
     ],
   },
