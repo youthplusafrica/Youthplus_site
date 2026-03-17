@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import { sendEmail } from "../../../lib/email/send-email";
 
 type PurchaseRequestData = {
   itemId: string;
@@ -88,37 +88,28 @@ export async function POST(request: NextRequest) {
       price: serverPrice,
     };
 
-    // Configure nodemailer transporter
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST || "smtp.gmail.com",
-      port: parseInt(process.env.SMTP_PORT || "587"),
-      secure: process.env.SMTP_SECURE === "true",
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-      },
-    });
-
-    // If no SMTP credentials are configured, fall back to logging
-    if (!process.env.SMTP_USER || !process.env.SMTP_PASS) {
-      console.warn("SMTP credentials not configured. Email would be sent to: support@youthplusafrica.com");
+    if (!process.env.RESEND_API_KEY) {
+      console.warn("Resend API key not configured. Email would be sent to: support@youthplusafrica.com");
       console.log("Purchase request data:", JSON.stringify(emailData, null, 2));
-      
+
       return NextResponse.json({
         success: true,
-        message: "Purchase request submitted successfully (SMTP not configured - check server logs)",
+        message: "Purchase request submitted successfully (email service not configured - check server logs)",
       });
     }
 
     const emailBody = formatEmailBody(emailData);
     const subject = `New Purchase Request - ${serverItemName}`;
 
-    await transporter.sendMail({
-      from: process.env.SMTP_FROM || process.env.SMTP_USER,
+    const emailResult = await sendEmail({
       to: "support@youthplusafrica.com",
       subject,
       text: emailBody,
+      replyTo: emailData.customerEmail,
     });
+    if (!emailResult.success) {
+      throw new Error(emailResult.error || "Failed to send email");
+    }
 
     return NextResponse.json({
       success: true,

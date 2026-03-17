@@ -115,15 +115,20 @@ export default function MonthRowLayout({
 
               {/* Right: Event Slots */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 md:gap-2.5">
-                {eventTypes.map((type) => {
-                  const event = getEventByType(month, type);
+                {(() => {
+                  const slotEvents = eventTypes.map((type) => getEventByType(month, type));
+                  const remainingEvents = month.events.filter((event) => !slotEvents.includes(event));
+                  const resolvedSlots = slotEvents.map((event) => event ?? remainingEvents.shift());
+
+                  return eventTypes.map((slotType, index) => {
+                  const event = resolvedSlots[index];
                   const hasEvent = !!event;
                   const isPast = hasEvent && event ? isEventPast(event) : false;
                   const isClickable = hasEvent; // All events are now clickable, including past ones
 
                   return (
                     <div
-                      key={type}
+                      key={`${month.month}-${slotType}-${index}`}
                       className={`rounded-md border p-2 md:p-2.5 transition-colors min-h-[70px] flex flex-col relative ${
                         !hasEvent
                           ? "border-white/10 bg-white/3 opacity-60"
@@ -146,7 +151,7 @@ export default function MonthRowLayout({
                       }}
                     >
                       <p className="text-[10px] md:text-xs font-semibold uppercase tracking-wide text-[var(--yplus-primary,#d0a328)] mb-1.5">
-                        {type}
+                        {event?.type || slotType}
                       </p>
                       {hasEvent && event ? (
                         <>
@@ -187,7 +192,8 @@ export default function MonthRowLayout({
                       )}
                     </div>
                   );
-                })}
+                  });
+                })()}
               </div>
             </div>
           </div>
