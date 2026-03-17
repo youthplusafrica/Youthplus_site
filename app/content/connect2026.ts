@@ -113,13 +113,10 @@ export const CONNECT_2026: ConnectMonth[] = [
         type: "Webinar",
         date: "2026-03-24",
         location: "Online",
-        imageSrc: "/images/steph_mambo.png",
+        imageSrc: "/images/all_speakers.png",
         imageSrcs: [
-          "/images/steph_mambo.png",
-          "/images/quinta_onditi.png",
-          "/images/mumbua_muithya.png",
-          "/images/josephine_mbeo.png",
-          "/images/gloria_kisilu.png",
+          "/images/all_speakers.png",
+          "/images/key_conv_areas.png",
         ],
         description:
           "Can Women Have It All? A conversation on leadership, purpose, and building economic power without losing yourself.",

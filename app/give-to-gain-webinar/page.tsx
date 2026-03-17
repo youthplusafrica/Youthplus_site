@@ -8,7 +8,7 @@ export default function GiveToGainWebinarPage() {
     <>
       <HeaderNav />
       <SectionWithBg
-        src="/images/events-bg.jpg"
+        src="/images/all_speakers.png"
         alt="Give to Gain webinar background"
         overlay={55}
         className="py-10 md:py-14"
