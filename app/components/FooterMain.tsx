@@ -117,7 +117,7 @@ export default function FooterMain() {
               <li className="flex items-start gap-2">
                 <MailOutlined className="mt-0.5 text-white/70" />
                 <a
-                  href="mailto:hello@youthplusafrica.com"
+                  href="mailto:support@youthplusafrica.com"
                   className="hover:text-[var(--yplus-primary,#d0a328)] transition"
                 >
                   support@youthplusafrica.com
